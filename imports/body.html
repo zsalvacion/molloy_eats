@@ -1,0 +1,23 @@
+<body>
+  <div class="container">
+    <header>
+      <h1>Molloy Eats Homepage</h1>
+    </header>
+    <form action="/action_page.php">
+      First name: <input type="text" name="FirstName"><br>
+      Last name: <input type="text" name="LastName"><br>
+      Email: <input type="text" name="Email"><br>
+      <button type="button">Create New Account</button>
+
+</form>
+    <ul>
+      {{#each tasks}}
+        {{> task}}
+      {{/each}}
+    </ul>
+  </div>
+</body>
+ 
+<template name="task">
+  <li>{{text}}</li>
+</template>
