@@ -22,8 +22,9 @@ class Register extends React.Component{
       this.setState({password:e.target.value});
     };
     handleRegister(){
-      alert('Username is ' + this.state.username + ' Password is ' + this.state.password);
-      this.props.register(this.state.username, this.state.password);  
+      this.props.register(this.state.username, this.state.password);
+      alert('Account Created');
+      this.props.history.push("/login");
     };
 
   render() {
@@ -31,13 +32,13 @@ class Register extends React.Component{
         <div>
           <form>
             <h2>Please sign up</h2>
-            <label htmlFor="inputaUsername">Username</label>
+            <label htmlFor="inputUsername">Username</label>
             <input onChange={value => this.handleUsernameChange(value)} id="inputUsername" placeholder="Username" required autoFocus />
             <label htmlFor="inputPassword">Password</label>
             <input type="password" onChange={value => this.handlePasswordChange(value)} id="inputPassword" placeholder="Password" required />
             <button onClick={this.handleRegister} type="button">Register</button>
-            <li><Link to='/'>Login</Link></li>
           </form>
+          <li><Link to='/login'>Login</Link></li>
         </div>
          
       );

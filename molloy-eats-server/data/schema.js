@@ -36,6 +36,11 @@ type Order {
   ItemID: Int
 }
 
+type AuthPayload {
+  token: String
+  user: String
+}
+
 type Query {
   getStudent(StudentName: String): [Student]
   getStore(StoreID: Int): [Store]
@@ -45,8 +50,9 @@ type Query {
 
 type Mutation {
   createStudent(StudentName: String!, StudentPhone: String!): Student
-  login(StudentName: String!, Password: String!): Student
+  login(StudentName: String!, Password: String!): AuthPayload
   register(StudentName: String!, Password: String!): Student
+  editStudentProfile(StudentPhone: String, StudentEmail: String): Student
 }
 
 schema {

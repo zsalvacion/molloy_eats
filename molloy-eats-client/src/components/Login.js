@@ -1,41 +1,66 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { graphql } from 'react-apollo'; 
+import gql from 'graphql-tag';
 
 class Login extends React.Component {
     
     constructor(props) {
         super(props);
-        this.handleEmailChange = this.handleEmailChange.bind(this);
+        this.handleUsernameChange = this.handleUsernameChange.bind(this);
         this.handlePasswordChange = this.handlePasswordChange.bind(this);
+        this.handleLogin = this.handleLogin.bind(this);
         this.state = {
-          email:'',
+          username:'',
           password:''
         };
     }
 
-    handleEmailChange(e){
-    this.setState({email:e.target.value})
-    }
+    handleUsernameChange(e){
+      this.setState({username:e.target.value});
+    };
     handlePasswordChange(e){
-        this.setState({password:e.target.value})
-    }
-    signIn(){
-    alert('Email address is ' + this.state.email + ' Password is ' + this.state.password);            
-    }
+      this.setState({password:e.target.value});
+    };
+    async handleLogin(){
+      var result = await this.props.login(this.state.username, this.state.password); 
+      this.saveToken(result.data.login.token);
+      alert("Welcome " + result.data.login.user); 
+      this.props.history.push("/profile");
+    };
 
     render() {
         return (
             <form>
                 <h2> Please sign in </h2>
-                <label htmlFor="inputEmail"> Email address </label>
-                <input id="inputEmail" placeholder="Username" required autoFocus />
+                <label htmlFor="inputUsername"> Username </label>
+                <input onChange={value => this.handleUsernameChange(value)} id="inputUsername" placeholder="Username" required autoFocus />
                 <label htmlFor="inputPassword"> Password</label>
-                <input type="password" id="inputPassword" placeholder="Password" required />
-                <button onClick={this.signIn} type="button"> Sign in</button>
-                <li><Link to='/register'>Register</Link></li>
+                <input type="password" onChange={value => this.handlePasswordChange(value)} id="inputPassword" placeholder="Password" required />
+                <button onClick={this.handleLogin} type="button"> Sign in</button>
+                <li><Link to='/register'>Need a new account?</Link></li>
             </form>
         )
     }
+
+  saveToken = token => {
+    localStorage.setItem('auth-token', token);
+  }
+
 }
 
-export default Login
+export default graphql(
+  gql`
+    mutation Login($StudentName: String!, $Password: String!) {
+      login(StudentName: $StudentName, Password: $Password) {
+        token
+        user
+      }
+    }
+  `,
+  {
+    props: ({ mutate }) => ({
+      login: ( StudentName, Password ) => mutate({ variables: {StudentName, Password} }),
+    }),
+  },
+)(Login);
