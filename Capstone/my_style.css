@@ -1,0 +1,17 @@
+@charset "utf-8";
+footer {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+body {
+    background-color: #3B3B93;
+
+}
+.thumbnail {
+    background-color: #154771;
+    color: #151413;
+    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+    font-style: normal;
+    text-align: center;
+}
