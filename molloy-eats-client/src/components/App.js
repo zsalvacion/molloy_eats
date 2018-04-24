@@ -14,7 +14,7 @@ class App extends Component {
       <div className="ph3 pv1 background-gray">
       <h1>Molloy Eats</h1>
         <Switch>
-          <Route exact path="/login" component={Login} />
+          <Route exact path="/" component={Login} />
           <Route exact path="/register" component={Register} />
           <Route exact path="/profile" component={Profile} />
           <Route exact path="/menu1" component={SampleMenu1} />

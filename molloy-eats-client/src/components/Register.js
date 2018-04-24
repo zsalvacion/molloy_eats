@@ -38,7 +38,7 @@ class Register extends React.Component{
             <input type="password" onChange={value => this.handlePasswordChange(value)} id="inputPassword" placeholder="Password" required />
             <button onClick={this.handleRegister} type="button">Register</button>
           </form>
-          <li><Link to='/login'>Login</Link></li>
+          <li><Link to='/'>Login</Link></li>
         </div>
          
       );
