@@ -1,9 +1,22 @@
 import Sequelize from 'sequelize';
 
-const db = new Sequelize('molloyeats', "root", "password", {
-    host: 'localhost',
-    dialect: 'mysql'
-});
+var db;
+
+if(process.env.DATABASE_URL) { 
+    db = new Sequelize(process.env.DATABASE_URL, {
+        dialect: 'postgres',
+        protocol: 'postgres',
+        dialectOptions: {
+            ssl: true
+        }
+
+    });
+} else {
+    db = new Sequelize('molloyeats', "root", "password", {
+        host: 'localhost',
+        dialect: 'mysql'
+    })
+}
 
 const StudentModel = db.define('student', {
     StudentName: { type: Sequelize.STRING },
