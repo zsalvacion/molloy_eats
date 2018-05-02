@@ -19,6 +19,7 @@ class App extends Component {
           <Route exact path="/profile" component={Profile} />
           <Route exact path="/menu1" component={SampleMenu1} />
           <Route exact path="/menu2" component={SampleMenu2} />
+          <Route exact path="/createorder" component={CreateOrder} />
         </Switch>
       </div>
     </div>
