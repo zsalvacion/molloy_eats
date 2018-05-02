@@ -22,7 +22,7 @@ graphQLServer.use('/graphql',
 		}; 
 	}),
 );
-graphQLServer.use('/graphiql', graphiqlExpress({ endpointURL: '/graphql' }));
+graphQLServer.use('/', graphiqlExpress({ endpointURL: '/graphql' }));
 
 graphQLServer.listen(GRAPHQL_PORT, () =>
   console.log(
