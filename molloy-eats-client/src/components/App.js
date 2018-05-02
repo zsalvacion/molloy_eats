@@ -5,6 +5,7 @@ import Register from './Register.js';
 import Profile from './Profile.js';
 import SampleMenu1 from './SampleMenu1.js';
 import SampleMenu2 from './SampleMenu2.js';
+import CreateOrder from './CreateOrder.js';
 import '../styles/App.css';
 
 class App extends Component {
