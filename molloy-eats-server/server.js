@@ -5,7 +5,7 @@ import schema from './data/schema';
 import cors from 'cors';
 import passport from 'passport';
 
-const GRAPHQL_PORT = 3000;
+const GRAPHQL_PORT = process.env.PORT || 5000;
 
 const graphQLServer = express();
 
