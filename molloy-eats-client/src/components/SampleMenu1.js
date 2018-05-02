@@ -8,7 +8,7 @@ class AR_Menu extends React.Component{
         <div>
             <head>
               <title>AR Menu</title>
-              <link type="text/css" rel="stylesheet" href="armenu-3.css"></link>
+              <link type="text/css" rel="stylesheet" href="styles/armenu-3.css"></link>
               <script src="menu-3.js"></script>
               <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
             </head>
