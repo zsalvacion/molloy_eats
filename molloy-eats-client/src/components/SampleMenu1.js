@@ -8,13 +8,13 @@ class AR_Menu extends React.Component{
         <div>
             <head>
               <title>AR Menu</title>
-              <link type="text/css" rel="stylesheet" href="styles/armenu-3.css"></link>
+              <link type="text/css" rel="stylesheet" href="src/styles/armenu-3.css"></link>
               <script src="menu-3.js"></script>
               <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
             </head>
 
             <body>
-              <img id="molloy-logo" src="images/logo.jpg" alt="Molloy Eats Logo"/> 
+              <img id="molloy-logo" src="src/components/images/logo.jpg" alt="Molloy Eats Logo"/> 
               <h1>Anselma Room</h1>
               <nav>
                 <ul id="nav-bar">
