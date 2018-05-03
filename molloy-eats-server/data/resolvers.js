@@ -30,6 +30,9 @@ const resolvers = {
         createStudent(root, args, context, info){
             return Student.create({Username: input.Username, StudentPhone: input.StudentPhone});
         },
+        createOrder(root, args, context, info){
+            return Order.create({Price: args.Price});
+        },
         async login(root, args, context, info){
             var user = await Student.find({ where: { Username: args.Username } });
             if (!user) {
