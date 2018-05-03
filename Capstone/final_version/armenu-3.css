@@ -25,7 +25,16 @@ td {
 table {
     margin: 0 auto;
     margin-bottom: 30px;
+    width: 100%;
+    font-family: arial, sans-serif;
+    font-size: 150%;
+    /*
     border: 2px solid maroon;
+    */
+}
+
+table tr:nth-child(even) {
+  background-color: #ffaaaa;
 }
 
 
@@ -35,8 +44,10 @@ width: 30px;
 
 
 .section {
+  /*
   border: 5px solid;
   border-color: maroon;
+  */
   margin-top: 20px;
   margin-bottom: 20px;
   /*
