@@ -1,0 +1,55 @@
+body, header {
+	color: #fff;
+	font-size: 18px;
+	line-height: 1.6em;
+	background-attachment: fixed;
+	background-image: url('../starbucksbackground.jpg');
+	margin: 0px;
+	padding: 0px;
+	border: 0px;    
+	font: inherit;
+   	font-size: 100%;
+	vertical-align: baseline;
+
+
+}
+h1 {
+	font-family: "Freight Sans Black", "Gadget", "Impact", sans-serif;
+}
+.Header_mobileMenu___1kFhZ, 
+.Header_root___3HXAD{
+    background-color: #ffffff;
+    width: 100%;
+    border-bottom: 1px solid #CCCCCC;
+    height: 48px;
+    position: fixed;
+    z-index: 1030;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.Header_left___39FJk, 
+.Header_leftSpacer___Po2sv, 
+.Header_right___vyxG9
+
+
+
+
+}
+.tableContainer {
+  display: table;
+  border-spacing: 10px;
+}
+.tableRow {
+  display: table-row;
+}
+
+.tableCell {
+  vertical-align: top;
+  display: table-cell;
+}
+
