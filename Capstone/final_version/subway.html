@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" type="text/css" href="subway.css">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MolloyEats | Subway</title>
+</head>
+	<body>
+		<img id="molloy-logo" src="img/logo.jpg" alt="Molloy Eats Logo">
+		<div id = "showcase">
+		<script>
+			var i=0;
+			var images=[];
+			var time=5000;
+
+			images[0]='img/slideshow_pic1.jpg';
+			images[1]='img/slideshow_pic2.jpg';
+			images[2]='img/slideshow_pic3.jpg';
+			images[3]='img/slideshow_pic4.jpeg';
+			images[4]='img/slideshow_pic5.jpg';
+
+			function changeImg(){
+
+				document.slide.src=images[i];
+				if(i<images.length-1)
+				{
+					i++;
+				}	else	{
+					i=0;
+				}
+				setTimeout("changeImg()",time);
+			}
+		window.onload=changeImg;
+
+	</script>
+<img name="slide" width="400" hheight="200>"﻿>
+</div>
+	<h1>Main Menu</h1>
+		<!--
+		<nav>
+			<ul id="nav-bar">
+			  <li class="tab"><a href="armenu.html#breakfast">Breakfast</a></li>
+			  <li class="tab"><a href="armenu.html#burgers">Burgers</a></li>
+			  <li class="tab"><a href="armenu.html#specials">Specials</a></li>
+			  <li class="tab"><a href="armenu.html#sandwich">Sandwiches</a></li>
+			  <li class="tab"><a href="armenu.html#onthego">On-The-Go</a></li>
+			</ul>
+		</nav>
+		-->
+		<div id="mySidenav" class="sidenav">
+			<!-- remove javascript from html -->
+  			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+ 			<a href="armenu.html#breakfast">Breakfast</a></li>
+  			<a href="armenu.html#burgers">Burgers</a></li>
+  			<a href="armenu.html#specials">Specials</a></li>
+ 			<a href="armenu.html#sandwich">Sandwiches</a></li>
+ 			<a href="armenu.html#onthego">On-The-Go</a></li>
+		</div>
+
+		<!-- Use any element to open the sidenav -->
+		<span id="nav_button" onclick="openNav()">Menu</span>
+
+		<!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+		<div id="main">
+		<div class="section" id="breakfast">	
+
+			<div class="dollar-meal">
+					<h2>$6 Deal of the Day</h2>
+					<h3>Choose a 6-inch meal OR Footlong sub</h3>
+					<ul style="list-style-type:none">
+						<li><strong>Monday</strong><p>Sweet Onion Chicken Teriyaki</p></li>
+ 						<li><strong>Tuesday</strong><p>Oven Roasted Chicken</p></li>
+  						<li><strong>Wednesday</strong><p>Turkey Breast</p></li>
+  						<li><strong>Thursday</strong><p>Italian B.M.T</p></li>
+  						<li><strong>Friday</strong><p>Tuna</p></li>
+  						<li><strong>Saturday</strong><p>Black Forest Ham</p></li>
+  						<li><strong>Sunday</strong><p>Meatball Marinara</p></li>
+  					</ul>
+  					<p><em><strong>6-inch Sub of the Day available for $3.50</strong></em></p>
+				</div>
+				<h2>Subway FRESH FIT</h2>
+				<table border="1">
+					<tr>
+						<td>Turkey Breast</td>
+						<td><input type="checkbox">6-inch ($5.49)</td>
+						<td><input type="checkbox">Footlong ($8.29)</td>
+					</tr>
+					<tr>
+						<td>Roast Beef</td>
+						<td><input type="checkbox">6-inch ($5.49)</td>
+						<td><input type="checkbox">Footlong ($8.29)</td>
+					</tr>
+					<tr>
+						<td>Subway Club</td>
+						<td><input type="checkbox">6-inch ($5.49)</td>
+						<td><input type="checkbox">Footlong ($8.29)</td>
+					</tr>
+					<tr>
+						<td>Veggie Delite</td>
+						<td><input type="checkbox">6-inch ($4.59)</td>
+						<td><input type="checkbox">Footlong ($6.49)</td>
+					</tr>
+					<tr>
+						<td>Black Forest Ham</td>
+						<td><input type="checkbox">6-inch ($4.39)</td>
+						<td><input type="checkbox">Footlong ($6.49)</td>
+					</tr>
+					<tr>
+						<td>Sweet Onion Chicken Teriyaki</td>
+						<td><input type="checkbox">6-inch ($5.49)</td>
+						<td><input type="checkbox">Footlong ($8.29)</td>
+					</tr>
+					<tr>
+						<td>Rotisserie-Style Chicken</td>
+						<td><input type="checkbox">6-inch ($5.49)</td>
+						<td><input type="checkbox">Footlong ($8.29)</td>
+					</tr>
+					<tr>
+						<td>Oven Roasted Chicken</td>
+						<td><input type="checkbox">6-inch ($5.49)</td>
+						<td><input type="checkbox">Footlong ($8.29)</td>
+					</tr>
+				</table>
+		
+				<h2>Signature</h2>
+				<table border="1">
+					<tr>
+						<td>Chicken &amp; Bacon Ranch Melt</td>
+						<td><input type="checkbox">6-inch ($5.49)</td>
+						<td><input type="checkbox">Footlong ($8.29)</td>
+					</tr>
+					<tr>
+						<td>Cold Cut Combo</td>
+						<td><input type="checkbox">6-inch ($4.59)</td>
+						<td><input type="checkbox">Footlong ($6.49)</td>
+					</tr>
+					<tr>
+						<td>Italian B.M.T.&reg;</td>
+						<td><input type="checkbox">6-inch ($5.49)</td>
+						<td><input type="checkbox">Footlong ($8.29)</td>
+					</tr>
+					<tr>
+						<td>Meatball Marinara</td>
+						<td><input type="checkbox">6-inch ($4.59)</td>
+						<td><input type="checkbox">Footlong ($6.49)</td>
+					</tr>
+					<tr>
+						<td>Spicy Italian</td>
+						<td><input type="checkbox">6-inch ($4.59)</td>
+						<td><input type="checkbox">Footlong ($6.49)</td>
+					</tr>
+					<tr>
+						<td>Steak &amp; Cheese</td>
+						<td><input type="checkbox">6-inch ($5.49)</td>
+						<td><input type="checkbox">Footlong ($8.29)</td>
+					</tr>
+					<tr>
+						<td>Tuna</td>
+						<td><input type="checkbox">6-inch ($5.49)</td>
+						<td><input type="checkbox">Footlong ($8.29)</td>
+					</tr>				
+				</table>
+				
+				<div class="dollar-meal">
+					<h2>Make it a meal.</h2>
+					<h3>Add chips &amp; a drink for <strong>$2.60</strong></h3>
+				</div>
+
+				<h2>Extras</h2>
+				<table>
+					<tr>
+						<td>Bacon</td>
+						<td><input type="checkbox">6-inch ($1.19)</td>
+						<td><input type="checkbox">Footlong ($1.69)</td>
+					</tr>
+					<tr>
+						<td>Double meat</td>
+						<td><input type="checkbox">6-inch ($2.19)</td>
+						<td><input type="checkbox">Footlong ($3.79)</td>
+					</tr>
+					<tr>
+						<td>Extra cheese</td>
+						<td><input type="checkbox">6-inch ($0.99)</td>
+						<td><input type="checkbox">Footlong ($1.29)</td>
+					</tr>
+					<tr>
+						<td>Deluxe<p>(50% more meat)</p></td>
+						<td><input type="checkbox">6-inch ($1.39)</td>
+						<td><input type="checkbox">Footlong ($2.19)</td>
+					</tr>
+					<tr>
+						<td>Guacamole</td>
+						<td><input type="checkbox">6-inch ($1.39)</td>
+						<td><input type="checkbox">Footlong ($2.19)</td>
+					</tr>
+				</table>
+
+				<h2>Local Favorites</h2>
+				<table>
+					<tr>
+						<td>Flatizza</td>
+						<td><input type="checkbox">$4.19</td>
+					</tr>
+					<tr>
+						<td>Buffalo Chicken</td>
+						<td><input type="checkbox">6-inch ($5.49)</td>
+						<td><input type="checkbox">Footlong ($8.29)</td>
+					</tr>
+					<tr>
+						<td>Veggie Patty</td>
+						<td><input type="checkbox">6-inch ($4.99)</td>
+						<td><input type="checkbox">Footlong ($7.09)</td>
+					</tr>
+					<tr>
+						<td>Carved Turkey</td>
+						<td><input type="checkbox">6-inch ($5.49)</td>
+						<td><input type="checkbox">Footlong ($8.29)</td>
+					</tr>
+				</table>
+
+				<h2>Drinks &amp; Sides</h2>
+				<table>
+					<tr>
+						<td>Fountain</td>
+						<td><input type="checkbox">21oz ($1.99)</td>
+						<td><input type="checkbox">30oz ($2.29)</td>
+					</tr>
+					<tr>
+						<td>Apple</td>
+						<td><input type="checkbox">$1.29</td>
+					</tr>
+					<tr>
+						<td>Chips</td>
+						<td><input type="checkbox">$1.19</td>
+					</tr>
+					<tr>
+						<td>Cookie</td>
+						<td><input type="checkbox">$0.79</td>
+					</tr>
+				</table>
+
+			</div>
+
+		
