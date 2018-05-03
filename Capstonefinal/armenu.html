@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>AR Menu</title>
+		<link type="text/css" rel="stylesheet" href="armenu.css">
+		<script src="menu.js"></script>
+	</head>
+
+	<body>
+		<img id="molloy-logo" src="images/logo.jpg" alt="Molloy Eats Logo"> 
+		<h1>Anselma Room</h1>
+		<!--
+		<nav>
+			<ul id="nav-bar">
+			  <li class="tab"><a href="armenu.html#breakfast">Breakfast</a></li>
+			  <li class="tab"><a href="armenu.html#burgers">Burgers</a></li>
+			  <li class="tab"><a href="armenu.html#specials">Specials</a></li>
+			  <li class="tab"><a href="armenu.html#sandwich">Sandwiches</a></li>
+			  <li class="tab"><a href="armenu.html#onthego">On-The-Go</a></li>
+			</ul>
+
+		</nav>
+		-->
+		<div id="mySidenav" class="sidenav">
+			<!-- remove javascript from html -->
+  			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+ 			<a href="armenu.html#breakfast">Breakfast</a></li>
+  			<a href="armenu.html#burgers">Burgers</a></li>
+  			<a href="armenu.html#specials">Specials</a></li>
+ 			<a href="armenu.html#sandwich">Sandwiches</a></li>
+ 			<a href="armenu.html#onthego">On-The-Go</a></li>
+		</div>
+
+		<!-- Use any element to open the sidenav -->
+		<span id="nav_button" onclick="openNav()">Menu</span>
+
+		<!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+		<div id="main">
+		  ...
+		</div>
+		
+		<div class="section" id="breakfast">	
+			
+			<h1>Breakfast</h1>	
+				<h2>Breakfast Deals</h2>
+				<table border="1">
+					<tr>
+						<td><input type="checkbox">1 Egg on a roll w/ bacon</td>
+						<td>$2.99</td>
+					</tr>
+					
+					<tr>
+						<td><input type="checkbox">2 Eggs on a roll w/ bacon</td>
+						<td>$3.89</td>
+					</tr>
+
+					<tr>
+						<td><input type="checkbox">Cheese Omelet</td>
+						<td>$2.25</td>
+					</tr>
+
+					<tr>
+						<td><input type="checkbox">Western Omelet</td>
+						<td>$4.25</td>	
+					</tr>
+				</table>
+
+				<div class="dollar-meal">
+					<h2><input type="checkbox">$5 MEAL DEAL</h2>
+					<p>
+						One Egg on a roll w/ Bacon OR Sausage
+						OR Turkey Bacon, Hand Fruit &amp; Small Coffee
+					</p>
+				</div>
+				<!--
+				<div class="5-dollar-meal">
+				<table border="1">	
+					<tr>
+						<td><input type="checkbox">$5 MEAL DEAL
+							One Egg on a roll w/ Bacon OR Sausage
+							OR Turkey Bacon, Hand Fruit &amp; Small Coffee
+						</td>
+					</tr>
+				</table>
+				</div>
+				-->
+				
+				<h2>Create Your Own Breakfast</h2>
+				<table border="1">
+					<tr>
+						<td><input type="checkbox">1 Egg Or Egg White</td>
+						<td>$0.95</td>
+					</tr>
+						
+					<tr>
+						<td><input type="checkbox">2 Eggs Or Egg Whites</td> 
+						<td>$1.75</td>
+					</tr>
+
+					<tr>
+						<td><input type="checkbox">Bacon (2 Slices)</td>
+						<td>$1.50</td>
+					</tr>
+
+					<tr>
+						<td><input type="checkbox">Sausage</td> 
+						<td>$1.25</td>
+					</tr>
+
+					<tr>
+						<td><input type="checkbox">Ham</td> 
+						<td>$1.25</td>
+					</tr>
+
+					<tr>
+						<td><input type="checkbox">Home Fries</td> 
+						<td>$1.75</td>
+					</tr>
+					
+					<tr>	
+						<td><input type="checkbox">Hashbrown</td>
+						<td>$1.75</td>
+					</tr>
+				</table>
+				
+				<h2>Bread</h2>
+				<table border="1">
+					<tr>	
+						<td><input type="checkbox">Roll/Bagel</td>
+						<td>$1.75</td>
+					</tr>
+
+					<tr>
+						<td><input type="checkbox">Wrap</td> 
+						<td>$1.25</td>
+						<td> <!-- make a dropdown checkbox inside checkbox -->
+								<li><input type="checkbox">White</li>
+								<li><input type="checkbox">Wheat</li>
+								<li><input type="checkbox">Tomato</li>
+								<li><input type="checkbox">Spinach</li>
+								<li><input type="checkbox">Gluten Free</li>
+						</td>
+					</tr>
+							
+					<tr>
+						<td><input type="checkbox">Toast (1 Slice)</td> 
+						<td>$0.65</td>
+					</tr>
+
+					<tr>
+						<td><input type="checkbox">Toast (2 Slices)</td> 
+						<td>$1.25</td>
+						<td>
+							<li><input type="checkbox">White</li>
+							<li><input type="checkbox">Wheat</li>
+							<li><input type="checkbox">Rye</li>
+						</td>
+					</tr>
+							
+					
+				</table>
+				
+				<h2>Toppings - .65 each</h2>
+				<table border="1">
+					<tr>
+						<td><input type="checkbox">Peppers</td>
+					<tr>
+
+					<tr>
+						<td><input type="checkbox">Broccoli</td>
+					</tr>
+
+					<tr>
+						<td><input type="checkbox">Mushrooms</td>
+					</tr>
+
+					<tr>
+						<td><input type="checkbox">Spinach</td>
+					</tr>
+
+					<tr>
+						<td><input type="checkbox">Tomato</td>
+					</tr>
+
+					<tr>
+						<td><input type="checkbox">Onion</td>
+					</tr>
+				</table>
+				
+				<h2>Cheese - .65 each</h2>
+				<table border="1">
+					<tr>
+						<td><input type="checkbox">American</td>
+					<tr>
+
+					<tr>
+						<td><input type="checkbox">Swiss</td>
+					</tr>
+
+					<tr>
+						<td><input type="checkbox">Mozzarella</td>
+					</tr>
+
+					<tr>
+						<td><input type="checkbox">Pepper Jack</td>
+					</tr>
+
+					<tr>
+						<td><input type="checkbox">Cheddar</td>
+					</tr>
+
+					<tr>
+						<td><input type="checkbox">Provolone</td>
+					</tr>
+				</table>
+			
+		</div>
+
+		<div class="section" id="burgers">	
+			<h1>Burgers</h1>
+				<h2>Burger Choice: Includes Lettuce &amp; Tomato</h2>
+				<table border="1">
+					<tr>
+						<td><input type="checkbox">Single Burger</td> 
+						<td>$3.99</td>
+					</tr>
+
+					<tr>
+						<td><input type="checkbox">Double Burger</td> 
+						<td>$5.99</td>
+					</tr>
+
+					<tr>
+						<td><input type="checkbox">Triple Burger</td> 
+						<td>$6.99</td>
+					</tr>
+
+					<tr>
+						<td><input type="checkbox">Grilled Chicken</td> 
+						<td>$5.99</td>
+					<tr>
+						<td><input type="checkbox">Turkey Burger</td> 
+						<td>$4.25</td>
+					</tr>
+
+					<tr>
+						<td><input type="checkbox">Vegan Burger</td> 
+						<td>$4.45</td>
+					</tr>
+
+					<tr>
+						<td><input type="checkbox">Grilled Cheese (4 Slices)</td> 
+						<td>$3.45</td>	
+					</tr>
+				</table>
+				
+				<div class="dollar-meal">
+					<h1><input type="checkbox">$5 MEAL DEAL</h1>
+					<p>
+						Cheeseburger or Hamburger Reg. French Fries
+					    or House Chips &amp; a Small Fountain Drink
+					</p>
+				</div>
+				
+				<h2>Toppings - (Additional) $0.65 each</h2>
+				<table border="1">
+					<tr>
+						<td><input type="checkbox">Lettuce</td>
+					<tr>
+
+					<tr>
+						<td><input type="checkbox">Pickles</td>
+					</tr>
+
+					<tr>
+						<td><input type="checkbox">Tomato</td>
+					</tr>
+
+					<tr>
+						<td><input type="checkbox">Onion</td>
+					</tr>
+
+					<tr>
+						<td><input type="checkbox">Jalapeno</td>
+					</tr>
+				</table>
+
+				<h2>Cheese - (Additional) $0.65 each</h2>
+				<table border="1">
+					<tr>
+						<td><input type="checkbox">American</td>
+					<tr>
+
+					<tr>
+						<td><input type="checkbox">Swiss</td>
+					</tr>
+
+					<tr>
+						<td><input type="checkbox">Mozzarella</td>
+					</tr>
+
+					<tr>
+						<td><input type="checkbox">Pepper Jack</td>
+					</tr>
+
+					<tr>
+						<td><input type="checkbox">Cheddar</td>
+					</tr>
+
+					<tr>
+						<td><input type="checkbox">Provolone</td>
+					</tr>
+				</table>
+
+		</div>
+
+		<div class="section" id="specials">
+			<h1>Grill Specials</h1>
+				<h2>Specials</h2>
+				<table border="1">
+					<tr>
+						<td><input type="checkbox">Cheese Quesadilla</td> 
+						<td>$6.15</td>
+					</tr>
+
+					<tr>
+						<td><input type="checkbox">Chicken Quesadilla</td> 
+						<td>$6.65</td>
+					</tr>
+
+					<tr>
+						<td><input type="checkbox">Chicken Tenders (3 pcs.)</td> 
+						<td>$5.15</td>
+					</tr>
+
+					<tr>
+						<td><input type="checkbox">Mozzarella Mezzaluna</td> 
+						<td>$4.00</td>
+					</tr>
+				</table>
+				
+				<h2>Add-Ons</h2>
+					<table border="1">
+						<tr>
+							<td><input type="checkbox">Applewood Bacon (2 pcs.)</td> 
+							<td>$1.50</td>
+						</tr>
+					</table>
+				
+				<h2>Sides</h2>
+					<table border="1">
+						<tr>
+							<td><input type="checkbox">Onion Rings</td> 
+							<td>$2.99</td>
+						</tr>
+
+						<tr>
+							<td><input type="checkbox">Small Fries</td> 
+							<td>$2.09</td>
+						</tr>
+
+						<tr>
+							<td><input type="checkbox">Large Fries</td> 
+							<td>$2.79</td>
+						</tr>
+
+						<tr>
+							<td><input type="checkbox">Small Sweet Potato Fries</td> 
+							<td>$2.49</td>
+						</tr>
+
+						<tr>
+							<td><input type="checkbox">Large Sweet Potato Fries</td> 
+							<td>$3.19</td>
+						</tr>
+					</table>
+		</div>
+
+		<div class="section" id="sandwich">
+		    <h1>Sandwich or Wrap</h1>
+		   		<h2>$6.25 Each (includes: 4oz Protein, 5 toppings + Cheese)</h2>
+		   		<h2>Sandwiches</h2>
+		   			<table border="1">
+				   		<tr>
+				   			<td><input type="checkbox">White</td>
+				   		</tr>
+
+				   		<tr>
+				   			<td><input type="checkbox">Wheat</td>
+				   		</tr>
+				   		
+				   		<tr>	
+				   			<td><input type="checkbox">Rye</td>
+				   		</tr>
+				   	</table>
+		   		<h2>Wraps</h2>
+		   			<table border="1">
+		   				<tr>
+		   					<td><input type="checkbox">White</td>
+		   				</tr>
+
+		   				<tr>
+		   					<td><input type="checkbox">Wheat</td>
+		   				</tr>
+
+		   				<tr>
+		   					<td><input type="checkbox">Tomato</td>
+		   				</tr>
+
+		   				<tr>
+		   					<td><input type="checkbox">Spinach</td>
+		   				</tr>
+
+		   				<tr>
+		   					<td><input type="checkbox">Gluten Free</td>
+		   				</tr>
+		   			</table>
+			   	<h2>Protein (Additional 4 oz $3.15)</h2>
+			   		<table border="1">
+			   			<tr>
+				   			<td><input type="checkbox">Turkery</td>
+				   		</tr>
+
+				   		<tr>
+				   			<td><input type="checkbox">Ham</td>
+				   		</tr>
+
+				   		<tr>
+				   			<td><input type="checkbox">Roast Beef</td>
+				   		</tr>
+
+				   		<tr>
+				   			<td><input type="checkbox">Salami</td>
+				   		</tr>
+
+				   		<tr>
+				   			<td><input type="checkbox">Chicken</td>
+				   		</tr>
+
+				   		<tr>
+				   			<td><input type="checkbox">Fried Chicken</td>
+				   		</tr>
+
+				   		<tr>
+				   			<td><input type="checkbox">Chicken Salad</td>
+				   		</tr>
+
+				   		<tr>
+				   			<td><input type="checkbox">Egg Salad</td>
+				   		</tr>
+
+				   		<tr>
+				   			<td><input type="checkbox">Tuna Salad</td>
+				   		</tr>
+				   	</table>
+				<h2>Toppings (Additional) - .65 each</h2>
+					<table border="1">
+						<tr>
+							<td><input type="checkbox">lettuce</td>
+						</tr>
+
+						<tr>
+							<td><input type="checkbox">Pickles</td>
+						</tr>
+
+						<tr>
+							<td><input type="checkbox">Tomato</td>
+						</tr>
+
+						<tr>
+							<td><input type="checkbox">Onion</td>
+						</tr>
+
+						<tr>
+							<td><input type="checkbox">Jalapeno</td>
+						</tr>
+
+						<tr>
+							<td><input type="checkbox">Roasted Red Peppers</td>
+						</tr>
+					</table>
+				<h2>Cheese (Additional) - .65 each</h2>
+					<table border="1">
+						<tr>
+							<td><input type="checkbox">American</td>
+						</tr>
+
+						<tr>
+							<td><input type="checkbox">Swiss</td>
+						</tr>
+
+						<tr>
+							<td><input type="checkbox">Mozzarella</td>
+						</tr>
+
+						<tr>
+							<td><input type="checkbox">Pepper Jack</td>
+						</tr>
+
+						<tr>
+							<td><input type="checkbox">Cheddar</td>
+						</tr>
+
+						<tr>
+							<td><input type="checkbox">Provolone</td>
+						</tr>
+					</table>
+				<h2>Dressing - Choice</h2>
+					<table border="1">
+						<tr>
+							<td><input type="checkbox">Italian</td>
+						</tr>
+
+						<tr>
+							<td><input type="checkbox">Balsamic</td>
+						</tr>
+
+						<tr>
+							<td><input type="checkbox">Caesar</td>
+						</tr>
+
+						<tr>
+							<td><input type="checkbox">Ranch</td>
+						</tr>
+
+						<tr>
+							<td><input type="checkbox">Chipotle</td>
+						</tr>
+
+						<tr>
+							<td><input type="checkbox">Mustard</td>
+						</tr>
+
+						<tr>
+							<td><input type="checkbox">Thousand Island</td>
+						</tr>
+
+						<tr>
+							<td><input type="checkbox">Honey Mustard</td>
+						</tr>
+					</table>
+				<h2>Sandwich Specials</h2>
+					<table border="1">
+						<tr>
+							<td><input type="checkbox">Fresh Mozzarella Sandwich</td> 
+							<td>$5.15</td>
+						<tr>
+
+						<tr>
+							<td><input type="checkbox">Tuna/Egg/Chicken Salad (4oz) (includes 2 toppings)</td> 
+							<td>$5.15</td>
+						</tr>
+					</table>
+				<h2>Extras</h2>
+					<table border="1">
+						<tr>
+							<td><input type="checkbox">Tuna/Egg/Chicken Salad (2oz)</td> 
+							<td>$1.55</td>
+						</tr>
+
+						<tr>
+							<td><input type="checkbox">Bacon (2 slices)</td> 
+							<td>$1.50</td>
+						</tr>
+
+						<tr>
+							<td><input type="checkbox">Fresh Mozzarella</td> 
+							<td>$1.25</td>
+						</tr>
+
+						<tr>
+							<td><input type="checkbox">Avocado</td> 
+							<td>$1.25</td>
+						</tr>
+
+						<tr>
+							<td><input type="checkbox">House Chips</td> 
+							<td>$1.25</td>
+						</tr>
+					</table>
+				<div class="dollar-meal">
+					<h1><input type="checkbox">$5 MEAL DEAL</h1>
+					<p>
+						Sandwich or wrap with 2oz protein &amp; 3 toppings.
+						Includes house chips and small fountain drink.
+					</p>
+				</div>
+		</div>
+
+		<div class="section" id="onthego">
+			<h1>On-The-Go</h1>
+				<h2>Refridgerated Snacks</h2>
+					<table border="1">
+						<tr>
+							<td><input type="checkbox">Cedar Creek</td> 
+							<td>$5.40</td>
+						</tr>
+
+						<tr>
+							<td><input type="checkbox">Cheese Dippers</td> 
+							<td>$1.00</td>
+						</tr>
+
+						<tr>
+							<td><input type="checkbox">Chobani Yogurt</td> 
+							<td>$3.65</td>
+						</tr>
+
+						<tr>
+							<td><input type="checkbox">Chobani Flip</td> 
+							<td>$3.65</td>
+						</tr>
+
+						<tr>
+							<td><input type="checkbox">Dippin Stix</td> 
+							<td>$2.15</td>
+						</tr>
+
+						<tr>
+							<td><input type="checkbox">Guacamole Cup</td> 
+							<td>$3.35</td>
+						</tr>
+
+						<tr>
+							<td><input type="checkbox">Hummus Cup</td> 
+							<td>$3.35</td>
+						</tr>
+
+						<tr>
+							<td><input type="checkbox">Kozy Shack</td> 
+							<td>$1.29</td>
+						</tr>
+
+						<tr>
+							<td><input type="checkbox">Tuna to Go</td> 
+							<td>$3.99</td>
+						</tr>
+
+						<tr>
+							<td><input type="checkbox">Uncrustable PB&amp;J </td> 
+							<td>$2.15</td>
+						</tr>
+					</table>
+				<!--
+				<h2>Add-Ons</h2>
+					<table border="1">
+						<tr>
+							<td><input type="checkbox">Applewood Bacon (2 pcs.)</td> 
+							<td>$1.50</td>
+						</tr>
+					</table>
+				-->
+				<h2>Sides</h2>
+					<table border="1">
+						<tr>
+							<td><input type="checkbox">Onion Rings</td> 
+							<td>$2.99</td>
+						</tr>
+
+						<tr>
+							<td><input type="checkbox">Small Fries</td> 
+							<td>$2.09</td>
+						</tr>
+
+						<tr>
+							<td><input type="checkbox">Large Fries</td> 
+							<td>$2.79</td>
+						</tr>
+
+						<tr>
+							<td><input type="checkbox">Small Sweet Potato Fries</td> 
+							<td>$2.49</td>
+						</tr>
+
+						<tr>
+							<td><input type="checkbox">Large Sweet Potato Fries</td> 
+							<td>$3.19</td>
+						</tr>
+
+					</table>
+
+				<h2>Drinks</h2>
+					<table border="1">
+						<tr>
+							<td><input type="checkbox">Coke</td> 
+							<td>$2.00</td>
+						</tr>
+
+						<tr>
+							<td><input type="checkbox">Dr.Pepper</td> 
+							<td>$2.00</td>
+						</tr>
+
+						<tr>
+							<td><input type="checkbox">Dasani Water</td> 
+							<td>$3.25</td>
+						</tr>
+
+						<tr>
+							<td><input type="checkbox">Sprite</td> 
+							<td>$2.00</td>
+						</tr>
+
+						<tr>
+							<td><input type="checkbox">Vitamin Water</td> 
+							<td>$3.25</td>
+						</tr>
+
+						<tr>
+							<td><input type="checkbox">Fuze</td> 
+							<td>$3.25</td>
+						</tr>
+
+						<tr>
+							<td><input type="checkbox">Powerade</td> 
+							<td>$2.65</td>
+						</tr>	
+
+					</table>
+
+					<span id="payment-total" style="text-decoration:underline;">0</span>
+					<input id="input" type="text" value="0"/>		
+		</div>
+
+		
+	</body>
+</html>
