@@ -61,7 +61,7 @@ const resolvers = {
             return Student.find({where: {Username: username}});
         },
         placeOrder(root, args, context, info){
-            return Order.create({Price: Float, Quantity: Int});
+            return Order.create({Price: args.Price, Quantity: args.Quantity});
         },
     }
 };

@@ -43,7 +43,7 @@ const ItemModel = db.define('item', {
 });
 
 const OrderModel = db.define('order', {
-    Price: { type: Sequelize.DECIMAL },
+    Price: { type: Sequelize.DECIMAL(10, 2) },
     Quantity: { type: Sequelize.INTEGER },
     PaymentMethod: { type: Sequelize.STRING },
     Username: { type: Sequelize.STRING },

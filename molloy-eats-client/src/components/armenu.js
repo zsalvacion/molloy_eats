@@ -1,80 +1,13 @@
 import React from 'react';
 import '../css/armenu-3.css';
-//Breakfast Items
-const price1EggOnARollWithBacon = 2.99;
-const price2EggsOnARollWithBacon = 3.89;
-const priceCheeseOmelet = 2.25;
-const priceWesternOmelet = 4.25;
+import { graphql } from 'react-apollo'; 
+import gql from 'graphql-tag';
 
-const price1EggOrEggWhite = 0.95;
-const price2EggsOrEggWhite = 1.75;
-const priceBacon = 1.50;
-const priceSausage = 1.25;
-const priceHam = 1.25;
-const priceHomeFries = 1.75;
-const priceHashBrown = 1.75;
-
-const priceBagel = 1.75;
-const priceWrap = 1.25;
-const priceToast1 = 0.65;
-const priceToast2 = 1.25;
-
-const pricePeppers = 0.65;
-const priceBroccoli = 0.65;
-const priceMushrooms = 0.65;
-const priceSpinach = 0.65;
-const priceTomato = 0.65;
-const priceOnion = 0.65;
-
-const priceCheeseAmerican = 0.65;
-const priceCheeseSwiss = 0.65;
-const priceCheeseMozzarella = 0.65;
-const priceCheesePepperJack = 0.65;
-const priceCheeseCheddar = 0.65;
-const priceCheeseProvolone = 0.65;
-//Burger Items
-const priceSingleBurger = 3.99;
-const priceDoubleBurger = 5.99;
-const priceTripleBurger = 6.99;
-const priceGrilledChickenBurger = 5.99;
-const priceTurkeyBurger = 4.25;
-const priceVeganBurger = 4.45;
-const priceGrilledCheese = 3.45;
-//Grill Items
-const priceCheeseQuesadilla = 6.15;
-const priceChickenQuesadilla = 6.65;
-const priceChickenTenders = 5.15;
-const priceMozzarellaMezzaluna = 4.00;
-
-const priceOnionRings = 2.99;
-const priceSmallFries = 2.09;
-const priceLargeFries = 2.79;
-const priceSmallSweetPotatoFries = 2.49;
-const priceLargeSweetPotatoFries = 3.19;
-//On-the-Go Items
-const priceCedarCreek = 5.40;
-const priceCheeseDippers = 1.00;
-const priceChobaniYogurt = 3.65;
-const priceChobaniFlip = 3.65;
-const priceDippinStix = 2.15;
-const priceGuacamoleCup = 3.35;
-const priceHummusCup = 3.35;
-const priceKozyShack = 1.29;
-const priceTunatoGo = 3.99;
-const priceUncrustablePBJ = 2.15;
-
-const priceCoke = 2.00;
-const priceDrPepper = 2.00;
-const priceDasaniWater = 3.25;
-const priceSprite = 2.00;
-const priceVitaminWater = 3.25;
-const priceFuze = 3.25;
-const pricePowerade = 2.65;  
-
-class armenu extends React.Component{
+class ArMenu extends React.Component{
 
   constructor(props) {
       super(props);
+      this.handlePlaceOrder = this.handlePlaceOrder.bind(this);
       this.state = {
 
         qnty1EggOnARollWithBacon: 0,
@@ -147,7 +80,8 @@ class armenu extends React.Component{
         qntyFuze: 0,
         qntyPowerade: 0,
         
-        totalPrice: 0.00
+        totalPrice: 0.00,
+        totalQuantity: 0
   }
 }
 
@@ -607,7 +541,9 @@ class armenu extends React.Component{
                   </tbody>
                 </table>  
             </div>
-            <p>Calculated Price: $<input type="number" name="price" id="price" value={this.state.totalPrice.toFixed(2)} readOnly/></p>
+            <p>Calculated Price: $<input type="number" name="price" id="price" value={this.state.totalPrice.toFixed(2)} defaultValue="0" readOnly/>
+            Total Quantity: <input type="number" name="quantity" id="quantity" value={this.state.totalQuantity} defaultValue="0" readOnly/></p>
+
             <button onClick={this.handlePlaceOrder} type="button">Place Your Order</button>
           </form>
       );
@@ -617,9 +553,21 @@ class armenu extends React.Component{
   }
   async onChangeQuantity(e) {
     var quantityName = e.target.name;
-    var quantityValue = e.target.value;
-    var priceName = quantityName.replace("qnty", "price");
+    var quantityValue = parseInt(e.target.value);
     await this.setState({[quantityName]: quantityValue});
+    var quantitySum = this.state.qnty1EggOnARollWithBacon + this.state.qnty2EggsOnARollWithBacon + this.state.qntyCheeseOmelet + this.state.qntyWesternOmelet +
+                      this.state.qnty1EggOrEggWhite + this.state.qnty2EggsOrEggWhite + this.state.qntyBacon + this.state.qntySausage + this.state.qntyHam + this.state.qntyHomeFries +
+                      this.state.qntyHashBrown + this.state.qntyBagel + this.state.qntyWrap + this.state.qntyToast1 + this.state.qntyToast2 + this.state.qntyPeppers + this.state.qntyBroccoli +
+                      this.state.qntyMushrooms + this.state.qntySpinach + this.state.qntyTomato + this.state.qntyOnion + this.state.qntyCheeseAmerican + this.state.qntyCheeseSwiss +
+                      this.state.qntyCheeseMozzarella + this.state.qntyCheesePepperJack + this.state.qntyCheeseCheddar + this.state.qntyCheeseProvolone +
+                      this.state.qntySingleBurger + this.state.qntyDoubleBurger + this.state.qntyTripleBurger + this.state.qntyGrilledChickenBurger + this.state.qntyTurkeyBurger +
+                      this.state.qntyVeganBurger + this.state.qntyGrilledCheese + this.state.qntyCheeseQuesadilla + this.state.qntyChickenQuesadilla + this.state.qntyChickenTenders +
+                      this.state.qntyMozzarellaMezzaluna + this.state.qntyOnionRings + this.state.qntySmallFries + this.state.qntyLargeFries + this.state.qntySmallSweetPotatoFries +
+                      this.state.qntyLargeSweetPotatoFries + this.state.qntyCedarCreek + this.state.qntyCheeseDippers + this.state.qntyChobaniYogurt + this.state.qntyChobaniFlip +
+                      this.state.qntyDippinStix + this.state.qntyGuacamoleCup + this.state.qntyHummusCup + this.state.qntyKozyShack + this.state.qntyTunatoGo + this.state.qntyUncrustablePBJ +
+                      this.state.qntyCoke + this.state.qntyDrPepper + this.state.qntyDasaniWater + this.state.qntySprite + this.state.qntyVitaminWater + this.state.qntyFuze + this.state.qntyPowerade;
+
+    this.setState({totalQuantity: quantitySum});
     this.calulateTotal();
   }
 
@@ -647,7 +595,6 @@ class armenu extends React.Component{
                           (this.state.qntyOnion * priceOnion) +
                           (this.state.qntyCheeseAmerican * priceCheeseAmerican) +
                           (this.state.qntyCheeseSwiss * priceCheeseSwiss) +
-                          (this.state.qntyCheeseMozzarella * priceCheeseMozzarella) +
                           (this.state.qntyCheeseMozzarella * priceCheeseMozzarella) +
                           (this.state.qntyCheesePepperJack * priceCheesePepperJack) +
                           (this.state.qntyCheeseCheddar * priceCheeseCheddar) +
@@ -694,8 +641,94 @@ class armenu extends React.Component{
   }
 
   async handlePlaceOrder(){
+    var result = await this.props.placeOrder(this.state.totalPrice, this.state.totalQuantity); 
     alert("Order Has Been Placed"); 
   };
 }
 
-export default armenu;
+export default graphql(
+  gql`
+    mutation placeOrder($Price: Float!, $Quantity: Int!) {
+      placeOrder(Price: $Price, Quantity: $Quantity) {
+        token
+        user
+      }
+    }
+  `,
+  {
+    props: ({ mutate }) => ({
+      placeOrder: ( Price, Quantity ) => mutate({ variables: {Price, Quantity} }),
+    }),
+  },
+)(ArMenu);
+
+//Breakfast Items
+const price1EggOnARollWithBacon = 2.99;
+const price2EggsOnARollWithBacon = 3.89;
+const priceCheeseOmelet = 2.25;
+const priceWesternOmelet = 4.25;
+
+const price1EggOrEggWhite = 0.95;
+const price2EggsOrEggWhite = 1.75;
+const priceBacon = 1.50;
+const priceSausage = 1.25;
+const priceHam = 1.25;
+const priceHomeFries = 1.75;
+const priceHashBrown = 1.75;
+
+const priceBagel = 1.75;
+const priceWrap = 1.25;
+const priceToast1 = 0.65;
+const priceToast2 = 1.25;
+
+const pricePeppers = 0.65;
+const priceBroccoli = 0.65;
+const priceMushrooms = 0.65;
+const priceSpinach = 0.65;
+const priceTomato = 0.65;
+const priceOnion = 0.65;
+
+const priceCheeseAmerican = 0.65;
+const priceCheeseSwiss = 0.65;
+const priceCheeseMozzarella = 0.65;
+const priceCheesePepperJack = 0.65;
+const priceCheeseCheddar = 0.65;
+const priceCheeseProvolone = 0.65;
+//Burger Items
+const priceSingleBurger = 3.99;
+const priceDoubleBurger = 5.99;
+const priceTripleBurger = 6.99;
+const priceGrilledChickenBurger = 5.99;
+const priceTurkeyBurger = 4.25;
+const priceVeganBurger = 4.45;
+const priceGrilledCheese = 3.45;
+//Grill Items
+const priceCheeseQuesadilla = 6.15;
+const priceChickenQuesadilla = 6.65;
+const priceChickenTenders = 5.15;
+const priceMozzarellaMezzaluna = 4.00;
+
+const priceOnionRings = 2.99;
+const priceSmallFries = 2.09;
+const priceLargeFries = 2.79;
+const priceSmallSweetPotatoFries = 2.49;
+const priceLargeSweetPotatoFries = 3.19;
+//On-the-Go Items
+const priceCedarCreek = 5.40;
+const priceCheeseDippers = 1.00;
+const priceChobaniYogurt = 3.65;
+const priceChobaniFlip = 3.65;
+const priceDippinStix = 2.15;
+const priceGuacamoleCup = 3.35;
+const priceHummusCup = 3.35;
+const priceKozyShack = 1.29;
+const priceTunatoGo = 3.99;
+const priceUncrustablePBJ = 2.15;
+
+const priceCoke = 2.00;
+const priceDrPepper = 2.00;
+const priceDasaniWater = 3.25;
+const priceSprite = 2.00;
+const priceVitaminWater = 3.25;
+const priceFuze = 3.25;
+const pricePowerade = 2.65;  

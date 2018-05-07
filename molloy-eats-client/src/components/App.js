@@ -3,7 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 import Login from './Login.js';
 import Register from './Register.js';
 import Profile from './Profile.js';
-import armenu from './armenu.js';
+import ArMenu from './ArMenu.js';
 import bareburger from './bareburger.js';
 import '../css/App.css';
 
@@ -17,7 +17,7 @@ class App extends Component {
           <Route exact path="/" component={Login} />
           <Route exact path="/register" component={Register} />
           <Route exact path="/profile" component={Profile} />
-          <Route exact path="/armenu" component={armenu} />
+          <Route exact path="/ArMenu" component={ArMenu} />
           <Route exact path="/bareburger" component={bareburger} />
         </Switch>
       </div>
