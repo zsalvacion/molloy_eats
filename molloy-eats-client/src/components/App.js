@@ -3,8 +3,8 @@ import { Switch, Route } from 'react-router-dom';
 import Login from './Login.js';
 import Register from './Register.js';
 import Profile from './Profile.js';
-import ArMenu from './Armenu.js';
-import Bareburger from './Bareburger.js';
+import ArMenu from './armenu.js';
+import Bareburger from './bareburger.js';
 import Orders from './Orders.js';
 import '../css/App.css';
 
