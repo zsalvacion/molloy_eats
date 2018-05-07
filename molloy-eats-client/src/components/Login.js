@@ -53,8 +53,7 @@ export default graphql(
   gql`
     mutation Login($Username: String!, $Password: String!) {
       login(Username: $Username, Password: $Password) {
-        token
-        user
+        id
       }
     }
   `,

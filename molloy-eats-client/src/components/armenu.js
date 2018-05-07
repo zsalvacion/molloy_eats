@@ -650,8 +650,7 @@ export default graphql(
   gql`
     mutation placeOrder($Price: Float!, $Quantity: Int!) {
       placeOrder(Price: $Price, Quantity: $Quantity) {
-        token
-        user
+          ItemID
       }
     }
   `,
