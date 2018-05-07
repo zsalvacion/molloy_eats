@@ -41,7 +41,7 @@ const resolvers = {
                 throw new Error('Invalid password');
             }
 
-            const token = jwt.sign({ username: user.Username }, APP_SECRET)
+            const token = jwt.sign({ username: user.Username, id: user.id }, APP_SECRET)
             return {
                 token: token,
                 user: user.Username
