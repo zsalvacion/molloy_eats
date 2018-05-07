@@ -4,7 +4,7 @@ import Login from './Login.js';
 import Register from './Register.js';
 import Profile from './Profile.js';
 import ArMenu from './ArMenu.js';
-import bareburger from './bareburger.js';
+import Bareburger from './bareburger.js';
 import Orders from './Orders.js';
 import '../css/App.css';
 
