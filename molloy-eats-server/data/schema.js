@@ -6,7 +6,7 @@ const typeDefs = `
 
 type Student {
   StudentID: Int
-  StudentName: String
+  Username: String
   StudentPhone: String
   StudentEmail: String
   Password: String
@@ -27,10 +27,10 @@ type Item {
 
 type Order {
   OrderID: Int
-  Price: Int
+  Price: Float
   Quantity: Int
   PaymentMethod: String
-  StudentID: Int
+  Username: String
   StoreName: String
   Time: String
   ItemID: Int
@@ -42,17 +42,18 @@ type AuthPayload {
 }
 
 type Query {
-  getStudent(StudentName: String): [Student]
-  getStore(StoreID: Int): [Store]
+  getStudent(Username: String): [Student]
+  getStore(Username: String): [Store]
   getItem(ItemID: Int): [Item]
   getOrder(OrderID: Int): [Order]
 }
 
 type Mutation {
-  createStudent(StudentName: String!, StudentPhone: String!): Student
-  login(StudentName: String!, Password: String!): AuthPayload
-  register(StudentName: String!, Password: String!): Student
+  createStudent(Username: String!, StudentPhone: String!): Student
+  login(Username: String!, Password: String!): AuthPayload
+  register(Username: String!, Password: String!): Student
   editStudentProfile(StudentPhone: String, StudentEmail: String): Student
+  placeOrder(Price: Float!, Quantity: Int!): Order
 }
 
 schema {

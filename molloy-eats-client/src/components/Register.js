@@ -47,15 +47,15 @@ class Register extends React.Component{
 
 export default graphql(
   gql`
-    mutation Register($StudentName: String!, $Password: String!) {
-      register(StudentName: $StudentName, Password: $Password) {
-        StudentName
+    mutation Register($Username: String!, $Password: String!) {
+      register(Username: $Username, Password: $Password) {
+        Username
       }
     }
   `,
   {
     props: ({ mutate }) => ({
-      register: ( StudentName, Password ) => mutate({ variables: {StudentName, Password} }),
+      register: ( Username, Password ) => mutate({ variables: {Username, Password} }),
     }),
   },
 )(Register);

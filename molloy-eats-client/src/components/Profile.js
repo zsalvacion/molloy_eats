@@ -60,7 +60,7 @@ export default graphql(
   gql`
     mutation EditStudentProfile($StudentPhone: String!, $StudentEmail: String!) {
       editStudentProfile(StudentPhone: $StudentPhone, StudentEmail: $StudentEmail) {
-        StudentName
+        Username
       }
     }
   `,

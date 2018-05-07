@@ -51,8 +51,8 @@ class Login extends React.Component {
 
 export default graphql(
   gql`
-    mutation Login($StudentName: String!, $Password: String!) {
-      login(StudentName: $StudentName, Password: $Password) {
+    mutation Login($Username: String!, $Password: String!) {
+      login(Username: $Username, Password: $Password) {
         token
         user
       }
@@ -60,7 +60,7 @@ export default graphql(
   `,
   {
     props: ({ mutate }) => ({
-      login: ( StudentName, Password ) => mutate({ variables: {StudentName, Password} }),
+      login: ( Username, Password ) => mutate({ variables: {Username, Password} }),
     }),
   },
 )(Login);

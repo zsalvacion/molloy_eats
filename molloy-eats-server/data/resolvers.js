@@ -28,10 +28,10 @@ const resolvers = {
 
     Mutation: {
         createStudent(root, args, context, info){
-            return Student.create({StudentName: input.StudentName, StudentPhone: input.StudentPhone});
+            return Student.create({Username: input.Username, StudentPhone: input.StudentPhone});
         },
         async login(root, args, context, info){
-            var user = await Student.find({ where: { StudentName: args.StudentName } });
+            var user = await Student.find({ where: { Username: args.Username } });
             if (!user) {
                 throw new Error('No such user found');
             }
@@ -41,25 +41,28 @@ const resolvers = {
                 throw new Error('Invalid password');
             }
 
-            const token = jwt.sign({ username: user.StudentName, id: user.id }, APP_SECRET)
+            const token = jwt.sign({ username: user.Username, id: user.id }, APP_SECRET)
             return {
                 token: token,
-                user: user.StudentName
+                user: user.Username
             }
         },
         async register(root, args, context, info){
-            if(await Student.find({where: {StudentName: args.StudentName}})) {
+            if(await Student.find({where: {Username: args.Username}})) {
                 throw new Error("Username already taken");
             }
 
             const hash = await bcrypt.hashSync(args.Password, 10);
-            return await Student.create({StudentName: args.StudentName, Password: hash});
+            return await Student.create({Username: args.Username, Password: hash});
         },
         async editStudentProfile(root, args, context, info){
             const username = getUser(context);
-            Student.update({StudentPhone: args.StudentPhone, StudentEmail: args.StudentEmail}, {where: {StudentName: username}});
-            return Student.find({where: {StudentName: username}});
-        }
+            Student.update({StudentPhone: args.StudentPhone, StudentEmail: args.StudentEmail}, {where: {Username: username}});
+            return Student.find({where: {Username: username}});
+        },
+        placeOrder(root, args, context, info){
+            return Order.create({Price: Float, Quantity: Int});
+        },
     }
 };
 

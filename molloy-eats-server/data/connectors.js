@@ -19,7 +19,7 @@ if(process.env.DATABASE_URL) {
 }
 
 const StudentModel = db.define('student', {
-    StudentName: { type: Sequelize.STRING },
+    Username: { type: Sequelize.STRING },
     StudentPhone: { type: Sequelize.STRING },
     StudentEmail: { type: Sequelize.STRING },
     Password: { type: Sequelize.STRING }
@@ -43,10 +43,10 @@ const ItemModel = db.define('item', {
 });
 
 const OrderModel = db.define('order', {
-    Price: { type: Sequelize.INTEGER },
+    Price: { type: Sequelize.DECIMAL },
     Quantity: { type: Sequelize.INTEGER },
     PaymentMethod: { type: Sequelize.STRING },
-    StudentID: { type: Sequelize.INTEGER },
+    Username: { type: Sequelize.STRING },
     StoreName: { type: Sequelize.STRING },
     Time: { type: Sequelize.STRING },
     ItemID: { type: Sequelize.INTEGER }
