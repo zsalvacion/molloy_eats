@@ -7,9 +7,9 @@ function getUser(context) {
   if (Authorization) {
     const token = Authorization.replace('Bearer ', '');
     console.log(token);
-    const { username } = jwt.verify(token, APP_SECRET);
-    console.log(username);
-    return username;
+    const { Username } = jwt.verify(token, APP_SECRET);
+    console.log(Username);
+    return Username;
   }
 
   throw new Error('Not authenticated')
