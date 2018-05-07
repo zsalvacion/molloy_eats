@@ -11,16 +11,12 @@ h2 {
 }
 
 td {
-	padding: 5px;
-}
-#header {
-  background-color: silver;
+	padding: 10px;
+
 }
 
 table {
     margin: 0 auto;
-    margin-bottom: 30px;
-    border: 2px solid maroon;
 }
 
 .dollar-meal {
@@ -28,6 +24,10 @@ table {
 	border-color: maroon;
 	text-align: center;
 	margin: 20px 200px 20px 200px;
+}
+
+#showcase {
+    margin: 0px 0px 0px 400px;
 }
 
 .section {
@@ -132,29 +132,3 @@ table {
 	width: 205px;
 }
 */
-.orderWindow{
-
-}
-img {
-height: 200px;
-  width: auto;
-}
-span {
-  font-weight: bold;
-}
-
-.highlightitem {
-  background-color: yellow;
-}
-
-.confirmation {
-  text-align: center;
-}
-
-.currentorder {
-    float-right;
-}
-
-.orderPreview {
-    
-}

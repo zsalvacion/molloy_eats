@@ -24,7 +24,7 @@ class Register extends React.Component{
     handleRegister(){
       this.props.register(this.state.username, this.state.password);
       alert('Account Created');
-      this.props.history.push("/login");
+      this.props.history.push("/");
     };
 
   render() {
