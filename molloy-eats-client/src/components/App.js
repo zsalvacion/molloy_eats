@@ -5,6 +5,7 @@ import Register from './Register.js';
 import Profile from './Profile.js';
 import ArMenu from './ArMenu.js';
 import bareburger from './bareburger.js';
+import Orders from './Orders.js';
 import '../css/App.css';
 
 class App extends Component {
@@ -19,6 +20,7 @@ class App extends Component {
           <Route exact path="/profile" component={Profile} />
           <Route exact path="/ArMenu" component={ArMenu} />
           <Route exact path="/bareburger" component={bareburger} />
+          <Route exact path="/orders" component={Orders} />
         </Switch>
       </div>
     </div>

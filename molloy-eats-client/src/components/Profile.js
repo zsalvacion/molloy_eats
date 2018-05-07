@@ -40,6 +40,7 @@ class Profile extends React.Component{
               <h2>Edit Profile</h2>
               <li><Link to='/armenu'>AR Menu</Link></li>
               <li><Link to='/bareburger'>Bareburger Menu</Link></li>
+              <li><Link to='/orders'>Order History</Link></li>
               <label htmlFor="inputEmail">Email: </label>
               <input type="email" onChange={value => this.handleEmailChange(value)} id="inputEmail" placeholder="Email" required autoFocus />
               <label htmlFor="inputPhoneNumber"><br />Phone Number: </label>

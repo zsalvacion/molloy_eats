@@ -62,4 +62,4 @@ export default graphql(
       getOrder: ( Username, Password ) => mutate({ variables: {Username, Password} }),
     }),
   },
-)(Login);
+)(Orders);
