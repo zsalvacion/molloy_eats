@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import '../css/bareburger.css';
 
 
-class bareburger extends React.Component{
+class Bareburger extends React.Component{
 
   changeImg(){
       var i=0;
@@ -542,4 +542,4 @@ class bareburger extends React.Component{
     }
 }
 
-export default bareburger;
+export default Bareburger;

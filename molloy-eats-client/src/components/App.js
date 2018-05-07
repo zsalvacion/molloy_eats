@@ -18,8 +18,8 @@ class App extends Component {
           <Route exact path="/" component={Login} />
           <Route exact path="/register" component={Register} />
           <Route exact path="/profile" component={Profile} />
-          <Route exact path="/ArMenu" component={ArMenu} />
-          <Route exact path="/bareburger" component={bareburger} />
+          <Route exact path="/armenu" component={ArMenu} />
+          <Route exact path="/bareburger" component={Bareburger} />
           <Route exact path="/orders" component={Orders} />
         </Switch>
       </div>
