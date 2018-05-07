@@ -641,22 +641,22 @@ class ArMenu extends React.Component{
   }
 
   async handlePlaceOrder(){
-    var result = await this.props.placeOrder(this.state.totalPrice, this.state.totalQuantity); 
+    var result = await this.props.placeOrder("Anselma Room", this.state.totalPrice, this.state.totalQuantity); 
     alert("Order Has Been Placed"); 
   };
 }
 
 export default graphql(
   gql`
-    mutation placeOrder($Price: Float!, $Quantity: Int!) {
-      placeOrder(Price: $Price, Quantity: $Quantity) {
+    mutation placeOrder($StoreName: String, $Price: Float!, $Quantity: Int!) {
+      placeOrder(StoreName: $StoreName, Price: $Price, Quantity: $Quantity) {
           ItemID
       }
     }
   `,
   {
     props: ({ mutate }) => ({
-      placeOrder: ( Price, Quantity ) => mutate({ variables: {Price, Quantity} }),
+      placeOrder: ( StoreName, Price, Quantity ) => mutate({ variables: { StoreName, Price, Quantity} }),
     }),
   },
 )(ArMenu);

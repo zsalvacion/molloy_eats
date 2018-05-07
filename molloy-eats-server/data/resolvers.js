@@ -62,7 +62,7 @@ const resolvers = {
         },
         placeOrder(root, args, context, info){
             const username = getUser(context);
-            return Order.create({Price: args.Price, Quantity: args.Quantity, Username: username});
+            return Order.create({StoreName: args.StoreName, Price: args.Price, Quantity: args.Quantity, Username: username});
         },
     }
 };
