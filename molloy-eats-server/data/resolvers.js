@@ -30,9 +30,6 @@ const resolvers = {
         createStudent(root, args, context, info){
             return Student.create({Username: input.Username, StudentPhone: input.StudentPhone});
         },
-        createOrder(root, args, context, info){
-            return Order.create({Price: args.Price});
-        },
         async login(root, args, context, info){
             var user = await Student.find({ where: { Username: args.Username } });
             if (!user) {
@@ -44,7 +41,7 @@ const resolvers = {
                 throw new Error('Invalid password');
             }
 
-            const token = jwt.sign({ username: user.Username, id: user.id }, APP_SECRET)
+            const token = jwt.sign({ username: user.Username }, APP_SECRET)
             return {
                 token: token,
                 user: user.Username
