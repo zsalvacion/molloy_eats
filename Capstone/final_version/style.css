@@ -1,0 +1,43 @@
+p{
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-family: sans-serif;
+
+
+}
+
+body{
+	margin: 0px;
+	padding: 0px;
+	padding-left: 2px;
+	margin-bottom: 20px;
+	
+}
+
+#top-banner{
+	width:100%;border:2px solid black;border-top:none;border-bottom:none;height:500px;
+}
+
+#top-banner img{
+	position:relative;top:-160px;
+}
+
+.tabular {
+	display:table;
+}
+
+.tablerow{
+	display:table-row;
+}
+
+.tablecell{
+	display:table-cell;
+	vertical-align: top;
+	width :33%;
+	text-align: center;
+}
+
+.tablecell img{
+	width :100%;
+}
