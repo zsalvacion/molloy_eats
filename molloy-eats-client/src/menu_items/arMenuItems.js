@@ -1,8 +1,12 @@
 var arMenuItems = {
 
+	OneEggOnARollWithBacon: {price: 2.99, id: 1, qnty: 0},
+	TwoEggsOnARollWithBacon: {price: 3.89, id: 2, qnty: 0},
 	CheeseOmelet: {price: 2.25, id: 3, qnty: 0},
 	WesternOmelet: {price: 4.25, id: 4, qnty: 0},
 
+	OneEggOrEggWhite: {price: 0.95, id: 5, qnty: 0},
+	TwoEggsOrEggWhite: {price: 1.75, id: 6, qnty: 0},
 	Bacon: {price: 1.50, id: 7, qnty: 0},
 	Sausage: {price: 1.25, id: 8, qnty: 0},
 	Ham: {price: 1.25, id: 9, qnty: 0},
@@ -64,15 +68,19 @@ var arMenuItems = {
 	Sprite: {price: 2.00, id: 57, qnty: 0},
 	VitaminWater: {price: 3.25, id: 58, qnty: 0},
 	Fuze: {price: 3.25, id: 59, qnty: 0},
+	Powerade: {price: 2.65, id: 60, qnty: 0},
 
 	calculateTotalQuantity() {
 	    var totalQuantity = 0;
 	    for (var prop in arMenuItems) {
 	      if (arMenuItems.hasOwnProperty(prop) && !isNaN(arMenuItems[prop].qnty)) {
+	          totalQuantity += arMenuItems[prop].qnty;
 	      }
 	    }
 	    return totalQuantity;
+  },
 
+  	calculateTotalPrice() {
 	  	var totalPrice = 0;
 	  	for (var prop in arMenuItems) {
 	  	  if (arMenuItems.hasOwnProperty(prop) && !isNaN(arMenuItems[prop].qnty)) {
