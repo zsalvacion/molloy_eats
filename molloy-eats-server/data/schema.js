@@ -5,7 +5,7 @@ import resolvers from './resolvers';
 const typeDefs = `
 
 type Student {
-  StudentID: Int
+  id: Int
   Username: String
   StudentPhone: String
   StudentEmail: String
@@ -13,20 +13,20 @@ type Student {
 }
 
 type Store {
-  StoreID: Int
+  id: Int
   StoreName: String
   StoreLocation: String
 }
 
 type Item {
-  ItemID: Int
+  id: Int
   ItemDescription: String
   StoreName: String
-  Price: Int
+  Price: Float
 }
 
 type Order {
-  OrderID: Int
+  id: Int
   Price: Float
   Quantity: Int
   PaymentMethod: String
@@ -54,6 +54,7 @@ type Mutation {
   register(Username: String!, Password: String!): Student
   editStudentProfile(StudentPhone: String, StudentEmail: String): Student
   placeOrder(StoreName: String, Price: Float!, Quantity: Int!): Order
+  addItem(id: Int, ItemDescription: String!, StoreName: String!, Price: Float!): Item
 }
 
 schema {

@@ -116,22 +116,22 @@ class ArMenu extends React.Component{
             <tbody>
               <tr>
                 <td>1 Egg on a roll w/ bacon</td>
-                <td><input type="number" name="qnty1EggOnARollWithBacon" onChange={(value) => this.onChangeQuantity(value)} defaultValue="0" min="0"/></td>
+                <td><input type="number" name="qnty1EggOnARollWithBacon" onChange={(value) => this.onChangeQuantity(value)} min="0"/></td>
                 <td>$2.99</td>
               </tr>
               <tr>
                 <td>2 Eggs on a roll w/ bacon</td>
-                <td><input type="number" name="qnty2EggsOnARollWithBacon" onChange={(value) => this.onChangeQuantity(value)} defaultValue="0" min="0"/></td>
+                <td><input type="number" name="qnty2EggsOnARollWithBacon" onChange={(value) => this.onChangeQuantity(value)} min="0"/></td>
                 <td>$3.89</td>
               </tr>
               <tr>
                 <td>Cheese Omelet</td>
-                <td><input type="number" name="qntyCheeseOmelet" onChange={(value) => this.onChangeQuantity(value)} defaultValue="0" min="0"/></td>
+                <td><input type="number" name="qntyCheeseOmelet" onChange={(value) => this.onChangeQuantity(value)} min="0"/></td>
                 <td>$2.25</td>
               </tr>
               <tr>
                 <td>Western Omelet</td>
-                <td><input type="number" name="qntyWesternOmelet" onChange={(value) => this.onChangeQuantity(value)} defaultValue="0" min="0"/></td>
+                <td><input type="number" name="qntyWesternOmelet" onChange={(value) => this.onChangeQuantity(value)} min="0"/></td>
                 <td>$4.25</td>
               </tr>
             </tbody>
@@ -148,37 +148,37 @@ class ArMenu extends React.Component{
             <tbody>
               <tr>
                 <td>1 Egg Or Egg White</td>
-                <td><input type="number" name="qnty1EggOrEggWhite" onChange={(value) => this.onChangeQuantity(value)} defaultValue="0" min="0"/></td>
+                <td><input type="number" name="qnty1EggOrEggWhite" onChange={(value) => this.onChangeQuantity(value)} min="0"/></td>
                 <td>$0.95</td>
               </tr>
               <tr>
                 <td>2 Eggs Or Egg Whites</td>
-                <td><input type="number" name="qnty2EggsOrEggWhite" onChange={(value) => this.onChangeQuantity(value)} defaultValue="0" min="0"/></td>
+                <td><input type="number" name="qnty2EggsOrEggWhite" onChange={(value) => this.onChangeQuantity(value)} min="0"/></td>
                 <td>$1.75</td>
               </tr>
               <tr>
                 <td>Bacon (2 Slices)</td>
-                <td><input type="number" name="qntyBacon" onChange={(value) => this.onChangeQuantity(value)} defaultValue="0" min="0"/></td>
+                <td><input type="number" name="qntyBacon" onChange={(value) => this.onChangeQuantity(value)} min="0"/></td>
                 <td>$1.50</td>
               </tr>
               <tr>
                 <td>Sausage</td>
-                <td><input type="number" name="qntySausage" onChange={(value) => this.onChangeQuantity(value)} defaultValue="0" min="0"/></td>
+                <td><input type="number" name="qntySausage" onChange={(value) => this.onChangeQuantity(value)} min="0"/></td>
                 <td>$1.25</td>
               </tr>
               <tr>
                 <td>Ham</td>
-                <td><input type="number" name="qntyHam" onChange={(value) => this.onChangeQuantity(value)} defaultValue="0" min="0"/></td>
+                <td><input type="number" name="qntyHam" onChange={(value) => this.onChangeQuantity(value)} min="0"/></td>
                 <td>$1.25</td>
               </tr>
               <tr>
                 <td>Home Fries</td>
-                <td><input type="number" name="qntyHomeFries" onChange={(value) => this.onChangeQuantity(value)} defaultValue="0" min="0"/></td>
+                <td><input type="number" name="qntyHomeFries" onChange={(value) => this.onChangeQuantity(value)} min="0"/></td>
                 <td>$1.75</td>
               </tr>
               <tr>
                 <td>Hash Brown</td>
-                <td><input type="number" name="qntyHashBrown" onChange={(value) => this.onChangeQuantity(value)} defaultValue="0" min="0"/></td>
+                <td><input type="number" name="qntyHashBrown" onChange={(value) => this.onChangeQuantity(value)} min="0"/></td>
                 <td>$1.75</td>
               </tr>
               <tr id="header">
@@ -189,22 +189,22 @@ class ArMenu extends React.Component{
               </tr>
              <tr>
                 <td>Roll/Bagel</td>
-                <td><input type="number" name="qntyBagel" onChange={(value) => this.onChangeQuantity(value)} defaultValue="0" min="0"/></td>
+                <td><input type="number" name="qntyBagel" onChange={(value) => this.onChangeQuantity(value)} min="0"/></td>
                 <td>$1.75</td>
               </tr>
               <tr> 
                 <td>Wrap</td>
-                <td><input type="number" name="qntyWrap" onChange={(value) => this.onChangeQuantity(value)} defaultValue="0" min="0"/></td>
+                <td><input type="number" name="qntyWrap" onChange={(value) => this.onChangeQuantity(value)} min="0"/></td>
                 <td>$1.25</td>
               </tr>
               <tr>
                 <td>Toast (1 Slice)</td>
-                <td><input type="number" name="qntyToast1" onChange={(value) => this.onChangeQuantity(value)} defaultValue="0" min="0"/></td>
+                <td><input type="number" name="qntyToast1" onChange={(value) => this.onChangeQuantity(value)} min="0"/></td>
                 <td>$0.65</td>
               </tr>
               <tr>
                 <td>Toast (2 Slices)</td>
-                <td><input type="number" name="qntyToast2" onChange={(value) => this.onChangeQuantity(value)} defaultValue="0" min="0"/></td>
+                <td><input type="number" name="qntyToast2" onChange={(value) => this.onChangeQuantity(value)} min="0"/></td>
                 <td>$1.25</td>
               </tr>
               <tr id="header">          
@@ -214,32 +214,32 @@ class ArMenu extends React.Component{
               </tr>
               <tr>            
                 <td>Peppers</td>
-                <td><input type="number" name="qntyPeppers" onChange={(value) => this.onChangeQuantity(value)} defaultValue="0" min="0"/></td>
+                <td><input type="number" name="qntyPeppers" onChange={(value) => this.onChangeQuantity(value)} min="0"/></td>
                 <td>$0.65</td>
               </tr>
               <tr>             
                 <td>Broccoli</td>
-                <td><input type="number" name="qntyBroccoli" onChange={(value) => this.onChangeQuantity(value)} defaultValue="0" min="0"/></td>
+                <td><input type="number" name="qntyBroccoli" onChange={(value) => this.onChangeQuantity(value)} min="0"/></td>
                 <td>$0.65</td>
               </tr>
               <tr>             
                 <td>Mushrooms</td>
-                <td><input type="number" name="qntyMushrooms" onChange={(value) => this.onChangeQuantity(value)} defaultValue="0" min="0"/></td>
+                <td><input type="number" name="qntyMushrooms" onChange={(value) => this.onChangeQuantity(value)} min="0"/></td>
                 <td>$0.65</td>
               </tr>
               <tr>            
                 <td>Spinach</td>
-                <td><input type="number" name="qntySpinach" onChange={(value) => this.onChangeQuantity(value)} defaultValue="0" min="0"/></td>
+                <td><input type="number" name="qntySpinach" onChange={(value) => this.onChangeQuantity(value)} min="0"/></td>
                 <td>$0.65</td>
               </tr>
               <tr>         
                 <td>Tomato</td>
-                <td><input type="number" name="qntyTomato" onChange={(value) => this.onChangeQuantity(value)} defaultValue="0" min="0"/></td>
+                <td><input type="number" name="qntyTomato" onChange={(value) => this.onChangeQuantity(value)} min="0"/></td>
                 <td>$0.65</td>
               </tr>
               <tr>  
                 <td>Onion</td>
-                <td><input type="number" name="qntyOnion" onChange={(value) => this.onChangeQuantity(value)} defaultValue="0" min="0"/></td>
+                <td><input type="number" name="qntyOnion" onChange={(value) => this.onChangeQuantity(value)} min="0"/></td>
                 <td>$0.65</td>
               </tr>
               <tr id="header">        
@@ -249,32 +249,32 @@ class ArMenu extends React.Component{
               </tr>
               <tr>              
                 <td>American</td>
-                <td><input type="number" name="qntyCheeseAmerican" onChange={(value) => this.onChangeQuantity(value)} defaultValue="0" min="0"/></td>
+                <td><input type="number" name="qntyCheeseAmerican" onChange={(value) => this.onChangeQuantity(value)} min="0"/></td>
                 <td>$0.65</td>
               </tr>
               <tr>              
                 <td>Swiss</td>
-                <td><input type="number" name="qntyCheeseSwiss" onChange={(value) => this.onChangeQuantity(value)} defaultValue="0" min="0"/></td>
+                <td><input type="number" name="qntyCheeseSwiss" onChange={(value) => this.onChangeQuantity(value)} min="0"/></td>
                 <td>$0.65</td>
               </tr>
               <tr>
                 <td>Mozzarella</td>
-                <td><input type="number" name="qntyCheeseMozzarella" onChange={(value) => this.onChangeQuantity(value)} defaultValue="0" min="0"/></td>
+                <td><input type="number" name="qntyCheeseMozzarella" onChange={(value) => this.onChangeQuantity(value)} min="0"/></td>
                 <td>$0.65</td>
               </tr>
               <tr>
                 <td>Pepper Jack</td>
-                <td><input type="number" name="qntyCheesePepperJack" onChange={(value) => this.onChangeQuantity(value)} defaultValue="0" min="0"/></td>
+                <td><input type="number" name="qntyCheesePepperJack" onChange={(value) => this.onChangeQuantity(value)} min="0"/></td>
                 <td>$0.65</td>
               </tr>
               <tr>
                 <td>Cheddar</td>
-                <td><input type="number" name="qntyCheeseCheddar" onChange={(value) => this.onChangeQuantity(value)} defaultValue="0" min="0"/></td>
+                <td><input type="number" name="qntyCheeseCheddar" onChange={(value) => this.onChangeQuantity(value)} min="0"/></td>
                 <td>$0.65</td>
               </tr>
               <tr>
                 <td>Provolone</td>
-                <td><input type="number" name="qntyCheeseProvolone" onChange={(value) => this.onChangeQuantity(value)} defaultValue="0" min="0"/></td>
+                <td><input type="number" name="qntyCheeseProvolone" onChange={(value) => this.onChangeQuantity(value)} min="0"/></td>
                 <td>$0.65</td>
               </tr>
             </tbody>
@@ -294,43 +294,43 @@ class ArMenu extends React.Component{
                 <tr>
               
                 <td>Single Burger</td>
-                <td><input type="number" name="qntySingleBurger" onChange={(value) => this.onChangeQuantity(value)} defaultValue="0" min="0"/></td>
+                <td><input type="number" name="qntySingleBurger" onChange={(value) => this.onChangeQuantity(value)} min="0"/></td>
                 <td>$3.99</td>
                 </tr>
               <tr>
                 
                 <td>Double Burger</td>
-                <td><input type="number" name="qntyDoubleBurger" onChange={(value) => this.onChangeQuantity(value)} defaultValue="0" min="0"/></td>
+                <td><input type="number" name="qntyDoubleBurger" onChange={(value) => this.onChangeQuantity(value)} min="0"/></td>
                 <td>$5.99</td>
               </tr>
               <tr>
              
                 <td>Triple Burger</td>
-                <td><input type="number" name="qntyTripleBurger" onChange={(value) => this.onChangeQuantity(value)} defaultValue="0" min="0"/></td>
+                <td><input type="number" name="qntyTripleBurger" onChange={(value) => this.onChangeQuantity(value)} min="0"/></td>
                 <td>$6.99</td>
               </tr>
              <tr>
              
                 <td>Grilled Chicken</td>
-                <td><input type="number" name="qntyGrilledChickenBurger" onChange={(value) => this.onChangeQuantity(value)} defaultValue="0" min="0"/></td>
+                <td><input type="number" name="qntyGrilledChickenBurger" onChange={(value) => this.onChangeQuantity(value)} min="0"/></td>
                 <td>$5.99</td>
               </tr>
              <tr>
              
                 <td>Turkey Burger</td>
-                <td><input type="number" name="qntyTurkeyBurger" onChange={(value) => this.onChangeQuantity(value)} defaultValue="0" min="0"/></td>
+                <td><input type="number" name="qntyTurkeyBurger" onChange={(value) => this.onChangeQuantity(value)} min="0"/></td>
                 <td>$4.25</td>
               </tr>
              <tr>
             
                 <td>Vegan Burger</td>
-                <td><input type="number" name="qntyVeganBurger" onChange={(value) => this.onChangeQuantity(value)} defaultValue="0" min="0"/></td>
+                <td><input type="number" name="qntyVeganBurger" onChange={(value) => this.onChangeQuantity(value)} min="0"/></td>
                 <td>$4.45</td>
               </tr>
               <tr>
              
                 <td>Grilled Cheese</td>
-                <td><input type="number" name="qntyyGrilledCheese" onChange={(value) => this.onChangeQuantity(value)} defaultValue="0" min="0"/></td>
+                <td><input type="number" name="qntyyGrilledCheese" onChange={(value) => this.onChangeQuantity(value)} min="0"/></td>
                 <td>$3.45</td>
               </tr>
             </tbody>  
@@ -351,25 +351,25 @@ class ArMenu extends React.Component{
                 <tr>
                
                 <td>Cheese Quesadilla</td>
-                <td><input type="number" name="qntyCheeseQuesadilla" onChange={(value) => this.onChangeQuantity(value)} defaultValue="0" min="0"/></td>
+                <td><input type="number" name="qntyCheeseQuesadilla" onChange={(value) => this.onChangeQuantity(value)} min="0"/></td>
                 <td>$6.15</td>
                 </tr>
                 <tr>
                 
                 <td>Chicken Quesadilla</td>
-                <td><input type="number" name="qntyChickenQuesadilla" onChange={(value) => this.onChangeQuantity(value)} defaultValue="0" min="0"/></td>
+                <td><input type="number" name="qntyChickenQuesadilla" onChange={(value) => this.onChangeQuantity(value)} min="0"/></td>
                 <td>$6.65</td>
                 </tr>
                 <tr>
               
                 <td>Chicken Tenders (3 pcs.)</td>
-                <td><input type="number" name="qntyChickenTenders" onChange={(value) => this.onChangeQuantity(value)} defaultValue="0" min="0"/></td>
+                <td><input type="number" name="qntyChickenTenders" onChange={(value) => this.onChangeQuantity(value)} min="0"/></td>
                 <td>$5.15</td>
                 </tr>
                 <tr>
              
                 <td>Mozzarella Mezzaluna</td>
-                <td><input type="number" name="qntyMozzarellaMezzaluna" onChange={(value) => this.onChangeQuantity(value)} defaultValue="0" min="0"/></td>
+                <td><input type="number" name="qntyMozzarellaMezzaluna" onChange={(value) => this.onChangeQuantity(value)} min="0"/></td>
                 <td>$4.00</td>
                 </tr>
               </tbody>  
@@ -389,29 +389,29 @@ class ArMenu extends React.Component{
               <tr>
                
                 <td>Onion Rings</td>
-                <td><input type="number" name="qntyOnionRings" onChange={(value) => this.onChangeQuantity(value)} defaultValue="0" min="0"/></td>
+                <td><input type="number" name="qntyOnionRings" onChange={(value) => this.onChangeQuantity(value)} min="0"/></td>
                 <td>$2.99</td>
               </tr>
               <tr>
                
                 <td>Small Fries</td>
-                <td><input type="number" name="qntySmallFries" onChange={(value) => this.onChangeQuantity(value)} defaultValue="0" min="0"/></td>
+                <td><input type="number" name="qntySmallFries" onChange={(value) => this.onChangeQuantity(value)} min="0"/></td>
                 <td>$2.09</td>
               </tr>
               <tr>
                 <td>Large Fries</td>
-                <td><input type="number" name="qntyLargeFries" onChange={(value) => this.onChangeQuantity(value)} defaultValue="0" min="0"/></td>
+                <td><input type="number" name="qntyLargeFries" onChange={(value) => this.onChangeQuantity(value)} min="0"/></td>
                 <td>$2.79</td>
               </tr>
               <tr>
                 <td>Small Sweet Potato Fries</td>
-                <td><input type="number" name="qntySmallSweetPotatoFries" onChange={(value) => this.onChangeQuantity(value)} defaultValue="0" min="0"/></td>
+                <td><input type="number" name="qntySmallSweetPotatoFries" onChange={(value) => this.onChangeQuantity(value)} min="0"/></td>
                 <td>$2.49</td>
               </tr>
             <tr>
             
                 <td>Large Sweet Potato Fries</td>
-                <td><input type="number" name="qntyLargeSweetPotatoFries" onChange={(value) => this.onChangeQuantity(value)} defaultValue="0" min="0"/></td>
+                <td><input type="number" name="qntyLargeSweetPotatoFries" onChange={(value) => this.onChangeQuantity(value)} min="0"/></td>
                 <td>$3.19</td>
               </tr>
           </tbody>
@@ -432,61 +432,61 @@ class ArMenu extends React.Component{
             <tr>
              
               <td>Cedar Creek</td>
-              <td><input type="number" name="qntyCedarCreek" onChange={(value) => this.onChangeQuantity(value)} defaultValue="0" min="0"/></td>
+              <td><input type="number" name="qntyCedarCreek" onChange={(value) => this.onChangeQuantity(value)} min="0"/></td>
               <td>$5.40</td>
             </tr>
             <tr>
              
               <td>Cheese Dippers</td>
-              <td><input type="number" name="qntyCheeseDippers" onChange={(value) => this.onChangeQuantity(value)} defaultValue="0" min="0"/></td>
+              <td><input type="number" name="qntyCheeseDippers" onChange={(value) => this.onChangeQuantity(value)} min="0"/></td>
               <td>$1.00</td>
             </tr>
             <tr>
 
               <td>Chobani Yogurt</td>
-              <td><input type="number" name="qntyChobaniYogurt" onChange={(value) => this.onChangeQuantity(value)} defaultValue="0" min="0"/></td>
+              <td><input type="number" name="qntyChobaniYogurt" onChange={(value) => this.onChangeQuantity(value)} min="0"/></td>
               <td>$3.65</td>
             </tr>
             <tr>
 
               <td>Chobani Flip</td>
-              <td><input type="number" name="qntyChobaniFlip" onChange={(value) => this.onChangeQuantity(value)} defaultValue="0" min="0"/></td>
+              <td><input type="number" name="qntyChobaniFlip" onChange={(value) => this.onChangeQuantity(value)} min="0"/></td>
               <td>$3.65</td>
             </tr>
             <tr>
              
               <td>Dippin Stix</td>
-              <td><input type="number" name="qntyDippinStix" onChange={(value) => this.onChangeQuantity(value)} defaultValue="0" min="0"/></td>
+              <td><input type="number" name="qntyDippinStix" onChange={(value) => this.onChangeQuantity(value)} min="0"/></td>
               <td>$2.15</td>
             </tr>
             <tr>
               
               <td>Guacamole Cup</td>
-              <td><input type="number" name="qntyGuacamoleCup" onChange={(value) => this.onChangeQuantity(value)} defaultValue="0" min="0"/></td>
+              <td><input type="number" name="qntyGuacamoleCup" onChange={(value) => this.onChangeQuantity(value)} min="0"/></td>
               <td>$3.35</td>
             </tr>
             <tr>
               
               <td>Hummus Cup</td>
-              <td><input type="number" name="qntyHummusCup" onChange={(value) => this.onChangeQuantity(value)} defaultValue="0" min="0"/></td>
+              <td><input type="number" name="qntyHummusCup" onChange={(value) => this.onChangeQuantity(value)} min="0"/></td>
               <td>$3.35</td>
             </tr>
             <tr>
 
               <td>Kozy Shack</td>
-              <td><input type="number" name="qntyKozyShack" onChange={(value) => this.onChangeQuantity(value)} defaultValue="0" min="0"/></td>
+              <td><input type="number" name="qntyKozyShack" onChange={(value) => this.onChangeQuantity(value)} min="0"/></td>
               <td>$1.29</td>
             </tr> 
             <tr>
 
               <td>Tuna to Go</td>
-              <td><input type="number" name="qntyTunatoGo" onChange={(value) => this.onChangeQuantity(value)} defaultValue="0" min="0"/></td>
+              <td><input type="number" name="qntyTunatoGo" onChange={(value) => this.onChangeQuantity(value)} min="0"/></td>
               <td>$3.99</td>
             </tr>
             <tr>
               
               <td>Uncrustable PB&amp;J</td>
-              <td><input type="number" name="qntyUncrustablePBJ" onChange={(value) => this.onChangeQuantity(value)} defaultValue="0" min="0"/></td>
+              <td><input type="number" name="qntyUncrustablePBJ" onChange={(value) => this.onChangeQuantity(value)} min="0"/></td>
               <td>$2.15</td>
             </tr>
           </tbody>
@@ -504,45 +504,45 @@ class ArMenu extends React.Component{
                   <tbody>
                     <tr>
                       <td>Coke</td>
-                      <td><input type="number" name="qntyCoke" onChange={(value) => this.onChangeQuantity(value)} defaultValue="0" min="0"/></td>
+                      <td><input type="number" name="qntyCoke" onChange={(value) => this.onChangeQuantity(value)} min="0"/></td>
                       <td>$2.00</td>
                     </tr>
                     <tr> 
                       <td>Dr.Pepper</td>
-                      <td><input type="number" name="qntyDrPepper" onChange={(value) => this.onChangeQuantity(value)} defaultValue="0" min="0"/></td>
+                      <td><input type="number" name="qntyDrPepper" onChange={(value) => this.onChangeQuantity(value)} min="0"/></td>
                       <td>$2.00</td>
                     </tr>
                     <tr>
                       <td>Dasani Water</td>
-                      <td><input type="number" name="qntyDasaniWater" onChange={(value) => this.onChangeQuantity(value)} defaultValue="0" min="0"/></td>
+                      <td><input type="number" name="qntyDasaniWater" onChange={(value) => this.onChangeQuantity(value)} min="0"/></td>
                       <td>$3.25</td>
                     </tr>
                     <tr>
                       <td>Sprite</td>
-                      <td><input type="number" name="qntySprite" onChange={(value) => this.onChangeQuantity(value)} defaultValue="0" min="0"/></td>
+                      <td><input type="number" name="qntySprite" onChange={(value) => this.onChangeQuantity(value)} min="0"/></td>
                       <td>$2.00</td>
                     </tr>
                     <tr>
                       <td>Vitamin Water</td>
-                      <td><input type="number" name="qntyVitaminWater" onChange={(value) => this.onChangeQuantity(value)} defaultValue="0" min="0"/></td>
+                      <td><input type="number" name="qntyVitaminWater" onChange={(value) => this.onChangeQuantity(value)} min="0"/></td>
                       <td>$3.25</td>
                     </tr>
                     <tr>
                       <td>Fuze</td>
-                      <td><input type="number" name="qntyFuze" onChange={(value) => this.onChangeQuantity(value)} defaultValue="0" min="0"/></td>
+                      <td><input type="number" name="qntyFuze" onChange={(value) => this.onChangeQuantity(value)} min="0"/></td>
                       <td>$3.25</td>
                     </tr>
                     <tr>
                      
                       <td>Powerade</td>
-                      <td><input type="number" name="qntyPowerade" onChange={(value) => this.onChangeQuantity(value)} defaultValue="0" min="0"/></td>
+                      <td><input type="number" name="qntyPowerade" onChange={(value) => this.onChangeQuantity(value)} min="0"/></td>
                       <td>$2.65</td>
                     </tr>
                   </tbody>
                 </table>  
             </div>
-            <p>Calculated Price: $<input type="number" name="price" id="price" value={this.state.totalPrice.toFixed(2)} defaultValue="0" readOnly/>
-            Total Quantity: <input type="number" name="quantity" id="quantity" value={this.state.totalQuantity} defaultValue="0" readOnly/></p>
+            <p>Calculated Price: $<input type="number" name="price" id="price" value={this.state.totalPrice.toFixed(2)} readOnly/>
+            Total Quantity: <input type="number" name="quantity" id="quantity" value={this.state.totalQuantity} readOnly/></p>
 
             <button onClick={this.handlePlaceOrder} type="button">Place Your Order</button>
           </form>

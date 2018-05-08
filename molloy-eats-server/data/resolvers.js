@@ -64,6 +64,10 @@ const resolvers = {
             const username = getUser(context);
             return Order.create({StoreName: args.StoreName, Price: args.Price, Quantity: args.Quantity, Username: username});
         },
+
+        addItem(root, args, context, info){
+            return Item.create({id: args.id, ItemDescription: args.ItemDescription, StoreName: args.StoreName, Price: args.Price});
+        },
     }
 };
 

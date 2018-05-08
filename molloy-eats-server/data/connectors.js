@@ -37,7 +37,7 @@ const StoreModel = db.define('store', {
 const ItemModel = db.define('item', {
     ItemDescription: { type: Sequelize.STRING },
     StoreName: { type: Sequelize.STRING },
-    Price: { type: Sequelize.INTEGER }
+    Price: { type: Sequelize.DECIMAL(10, 2) }
 }, {
     timestamps: false
 });
