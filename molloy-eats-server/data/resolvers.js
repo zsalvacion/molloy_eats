@@ -61,8 +61,8 @@ const resolvers = {
             return Student.find({where: {Username: username}});
         },
         placeOrder(root, args, context, info){
-            const username = getUser(context);
-            return Order.create({StoreName: args.StoreName, Price: args.Price, Quantity: args.Quantity, Username: username});
+            //const username = getUser(context);
+            return Order.create({StoreName: args.StoreName, Price: args.Price, Quantity: args.Quantity, ItemID: args.ItemID, Time: args.Time});
         },
 
         addItem(root, args, context, info){

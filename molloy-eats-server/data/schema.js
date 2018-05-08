@@ -53,7 +53,7 @@ type Mutation {
   login(Username: String!, Password: String!): AuthPayload
   register(Username: String!, Password: String!): Student
   editStudentProfile(StudentPhone: String, StudentEmail: String): Student
-  placeOrder(StoreName: String, Price: Float!, Quantity: Int!): Order
+  placeOrder(StoreName: String!, Price: Float!, Quantity: Int! , ItemID: Int!, Time: String!): Order
   addItem(id: Int, ItemDescription: String!, StoreName: String!, Price: Float!): Item
 }
 
