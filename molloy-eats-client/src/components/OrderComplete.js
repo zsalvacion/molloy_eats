@@ -6,6 +6,9 @@ class OrderComplete extends React.Component {
   constructor(props) {
     super(props);
     this.handleBackToHomepage = this.handleBackToHomepage.bind(this);
+    this.state = {
+      deliveryTime: 'X:XX'
+    };
   }
   render() {
     let rows;
@@ -18,6 +21,7 @@ class OrderComplete extends React.Component {
     return(
       <div>
         <h1>Thank You! Your Order has been Submitted.</h1>
+          <h2>It will arrive at { this.state.deliveryTime }</h2>
           <table>
             <thead>
               <tr id="header">
@@ -37,6 +41,14 @@ class OrderComplete extends React.Component {
     );
   }
   
+  componentWillReceiveProps(nextProps) {
+    if (!nextProps.data.loading) {
+      this.setState({ deliveryTime: nextProps.data.getOrder[nextProps.data.getOrder.length - 1].Time });
+    }
+
+    return null;
+  };
+
   handleBackToHomepage(){
     this.props.history.push("/profile");
   };
