@@ -27,14 +27,13 @@ class Bareburger extends React.Component{
       return (
               <div>
                 <head>
-                  <link rel="stylesheet" type="text/css" href="bareburger.css"/>
+                  <link rel="stylesheet" type="text/css" href="../css/bareburger.css"/>
                   <meta charset="utf-8"/>
                   <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
                     <meta name="viewport" content="width=device-width, initial-scale=1"/>
                     <title>MolloyEats | Bareburger</title>
                 </head>
                 <body>
-                  <img id="molloy-logo" src={require("../images/logo.jpg")} alt="Molloy Eats Logo"/>
                   <div id = "showcase">
                     <script>
                     window.onload=changeImg;
@@ -42,27 +41,19 @@ class Bareburger extends React.Component{
                 <img name="slide" width="400" hheight="200>"﻿/>
                 </div>
                   <h1>Main Menu</h1>
-                    <nav>
-                      <ul id="nav-bar">
-                        <li class="tab"><a href="armenu.html#breakfast">Breakfast</a></li>
-                        <li class="tab"><a href="armenu.html#burgers">Burgers</a></li>
-                        <li class="tab"><a href="armenu.html#specials">Specials</a></li>
-                        <li class="tab"><a href="armenu.html#sandwich">Sandwiches</a></li>
-                        <li class="tab"><a href="armenu.html#onthego">On-The-Go</a></li>
-                      </ul>
+                    <img id="bareburger-logo" src={require("../images/bareburger-logo.jpg")} alt="Bareburger Logo"/> 
+
+                    <nav className="topnav" id="myTopnav">
+                          <a href="/profile">Home</a>
+                          <a href="bareburger#food">Food</a>
+                          <a href="bareburger#drinks">Drinks</a>
+                          <a href="bareburger#shakes">Shakes</a>
+                          <a href="javascript:void(0);" style={{fontSize:'15px'}} className="icon" onclick="myFunction()">&#9776;</a>
                     </nav>
-                    <div id="mySidenav" class="sidenav">
-                      <li><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a></li>
-                      <li><a href="armenu.html#breakfast">Breakfast</a></li>
-                      <li><a href="armenu.html#burgers">Burgers</a></li>
-                      <li><a href="armenu.html#specials">Specials</a></li>
-                      <li><a href="armenu.html#sandwich">Sandwiches</a></li>
-                      <li><a href="armenu.html#onthego">On-The-Go</a></li>
-                    </div>
 
                     <span id="nav_button" onclick="openNav()">Menu</span>
                     <div id="main">
-                    <div class="section" id="breakfast">  
+                    <div className="section" id="food">  
 
                         <h1>Food</h1>
                         <h2>Burgers</h2>
@@ -364,7 +355,7 @@ class Bareburger extends React.Component{
                       
                     </div>
                     
-                    <div class="section" id="burgers">  
+                    <div className="section" id="drinks">  
                       <h1>Drinks</h1>
                         <h2>Beverages</h2>
                         <table border="1">
@@ -492,7 +483,7 @@ class Bareburger extends React.Component{
                           </tr>
                         </table>
                         </div>
-                        <div class="dollar-meal">
+                        <div className="shakes" id="shakes">
                           <h1>Shakes</h1>
                           <h2>Milkshakes</h2>
                           <table border="1">
