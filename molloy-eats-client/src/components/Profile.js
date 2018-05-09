@@ -36,7 +36,6 @@ class Profile extends React.Component{
       return (
         <div>
           <nav className="topnav" id="myTopnav">
-            <a href="/profile">Home</a>
             <a href="/armenu">Anselma Room Menu</a>
             <a href="/bareburger">Bareburger Menu</a>
             <a href="/orders">Order History</a>
