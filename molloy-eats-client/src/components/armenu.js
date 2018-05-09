@@ -261,7 +261,7 @@ class ArMenu extends React.Component{
               <tr>
              
                 <td>Grilled Cheese</td>
-                <td><input type="number" name="yGrilledCheese" onChange={(value) => this.onChangeQuantity(value)} min="0"/></td>
+                <td><input type="number" name="GrilledCheese" onChange={(value) => this.onChangeQuantity(value)} min="0"/></td>
                 <td>$3.45</td>
               </tr>
             </tbody>  
