@@ -544,7 +544,7 @@ class ArMenu extends React.Component{
 
 export default graphql(
   gql`
-    mutation placeOrder($StoreName: String, $Price: Float!, $Quantity: Int! , $ItemID: Int!, $Time: String!) {
+    mutation placeOrder($StoreName: String!, $Price: Float!, $Quantity: Int! , $ItemID: Int!, $Time: String!) {
       placeOrder(StoreName: $StoreName, Price: $Price, Quantity: $Quantity, ItemID: $ItemID, Time: $Time) {
           ItemID
       }
