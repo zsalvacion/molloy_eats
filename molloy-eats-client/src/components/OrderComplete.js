@@ -7,13 +7,14 @@ class OrderComplete extends React.Component {
     super(props);
     this.handleBackToHomepage = this.handleBackToHomepage.bind(this);
     this.state = {
-      deliveryTime: 'X:XX'
+      deliveryTime: 'X:XX',
+      totalPrice: 0.00
     };
   }
   render() {
     let rows;
     if(!this.props.data.loading) {
-      console.log(this.props.data.getOrder[0]);
+      console.log(this.props.data.getOrder);
       rows = this.props.data.getOrder.map(order => {
       return <OrderRow key = {order.id} data = {order}/>
       })
@@ -22,6 +23,7 @@ class OrderComplete extends React.Component {
       <div>
         <h1>Thank You! Your Order has been Submitted.</h1>
           <h2>It will arrive at { this.state.deliveryTime }</h2>
+          <h2>Your total comes to ${ this.state.totalPrice }</h2>
           <table>
             <thead>
               <tr id="header">
@@ -40,14 +42,20 @@ class OrderComplete extends React.Component {
       </div>
     );
   }
-  
-  componentWillReceiveProps(nextProps) {
-    if (!nextProps.data.loading) {
-      this.setState({ deliveryTime: nextProps.data.getOrder[nextProps.data.getOrder.length - 1].Time });
-    }
 
-    return null;
-  };
+    var result = await this.props.data.getOrder;
+    var resultDeliveryTime = result[result.length - 1].Time;
+    var currentTotalPrice = 0;
+    for(var i = 0 ; i < result.length; i++)
+    {
+      if(resultDeliveryTime == result[i].Time)
+      {
+        currentTotalPrice += (result[i].Price * result[i].Quantity);
+      }
+    }
+    this.setState({deliveryTime: resultDeliveryTime});
+    this.setState({totalPrice: currentTotalPrice});
+  }
 
   handleBackToHomepage(){
     this.props.history.push("/profile");

@@ -23,10 +23,15 @@ class Login extends React.Component {
       this.setState({password:e.target.value});
     };
     async handleLogin(){
+      try {
       var result = await this.props.login(this.state.username, this.state.password); 
       this.saveToken(result.data.login.token);
       alert("Welcome " + result.data.login.user); 
       this.props.history.push("/profile");
+      }
+      catch(e) {
+        alert("Invalid Username or Passowrd. Please retry.")
+      }
     };
 
     render() {
