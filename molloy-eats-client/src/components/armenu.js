@@ -12,9 +12,9 @@ class ArMenu extends React.Component{
       this.state = {       
         totalPrice: 0.00,
         totalQuantity: 0,
-        deliveryTimeHrs: '',
-        deliveryTimeMins: '',
-        deliveryTimeAmOrPm: ''
+        deliveryTimeHrs: '1',
+        deliveryTimeMins: '00',
+        deliveryTimeAmOrPm: 'AM'
   }
 }
 
@@ -534,7 +534,7 @@ class ArMenu extends React.Component{
   async handlePlaceOrder(){
     for (var prop in arMenuItems) {
       if (arMenuItems.hasOwnProperty(prop) && arMenuItems[prop].qnty > 0) {
-          var deliverTime = this.state.deliveryTimeHrs + this.state.deliveryTimeMins + this.state.deliveryTimeAmOrPm;
+          var deliverTime = this.state.deliveryTimeHrs + ":" + this.state.deliveryTimeMins + this.state.deliveryTimeAmOrPm;
           this.props.placeOrder("Anselma Room", arMenuItems[prop].price, arMenuItems[prop].qnty, arMenuItems[prop].id, deliverTime);
       }
     } 
