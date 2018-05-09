@@ -23,7 +23,7 @@ class Profile extends React.Component{
       this.setState({phoneNumber:e.target.value});
     };
     handleSubmit(){
-      alert('New Phone is ' + this.state.email + ' New Email is ' + this.state.phoneNumber);
+      alert(' New Email is ' + this.state.email + '.\nNew Phone is ' + this.state.phoneNumber + ".");
       this.props.editStudentProfile(this.state.phoneNumber, this.state.email);  
     };
     handleLogout(){
