@@ -25,7 +25,7 @@ class OrderComplete extends React.Component {
         <h1>Thank You! Your Order has been Submitted.</h1>
           <h2>It will arrive at { this.state.deliveryTime }</h2>
           <h2>Your total comes to ${ this.state.totalPrice }</h2>
-          <button onClick={this.calcDeliveryTimeAndTotalPrice} type="button">Refresh</button>
+          <button onClick={this.calcDeliveryTimeAndTotalPrice} type="button">Calculate Order</button>
           <table>
             <thead>
               <tr id="header">
