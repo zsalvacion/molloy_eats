@@ -45,7 +45,7 @@ type Query {
   getStudent(Username: String): [Student]
   getStore(Username: String): [Store]
   getItem(ItemID: Int): [Item]
-  getOrder(OrderID: Int): [Order]
+  getOrder(Username: String): [Order]
 }
 
 type Mutation {

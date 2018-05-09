@@ -22,7 +22,8 @@ const resolvers = {
             return Item.findAll({where: args});
         },
         getOrder(root, args, context, info){
-            return Order.findAll({where: args});
+            const username = getUser(context);
+            return Order.findAll({where: { Username: username }});
         },
     },
 

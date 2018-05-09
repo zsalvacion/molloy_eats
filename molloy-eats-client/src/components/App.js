@@ -5,7 +5,8 @@ import Register from './Register.js';
 import Profile from './Profile.js';
 import ArMenu from './armenu.js';
 import Bareburger from './bareburger.js';
-import Orders from './Orders.js';
+import OrderHistory from './OrderHistory.js';
+import OrderComplete from './OrderComplete.js';
 import '../css/App.css';
 
 class App extends Component {
@@ -13,14 +14,15 @@ class App extends Component {
     return (
     <div className="center w85">
       <div className="ph3 pv1 background-gray">
-      <h1>Molloy Eats</h1>
+      <img id="molloy-logo" src={require("../images/logo.jpg")} alt="Molloy Eats Logo"/>
         <Switch>
           <Route exact path="/" component={Login} />
           <Route exact path="/register" component={Register} />
           <Route exact path="/profile" component={Profile} />
           <Route exact path="/armenu" component={ArMenu} />
           <Route exact path="/bareburger" component={Bareburger} />
-          <Route exact path="/orders" component={Orders} />
+          <Route exact path="/orders" component={OrderHistory} />
+          <Route exact path="/ordercomplete" component={OrderComplete} />
         </Switch>
       </div>
     </div>

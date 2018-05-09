@@ -20,22 +20,20 @@ class ArMenu extends React.Component{
 
   render() {
       return (
-        <form>
-          <img id="molloy-logo" src={require("../images/logo.jpg")} alt="Molloy Eats Logo"/>
-          
+        <form>         
           <h1>Anselma Room</h1>
           <nav className="topnav" id="myTopnav">
             <a href="/profile">Home</a>
-            <a href="armenu-3.html#breakfast">Breakfast</a>
-            <a href="armenu-3.html#burgers">Burgers</a>
-            <a href="armenu-3.html#specials">Specials</a>
-            <a href="armenu-3.html#onthego">On-The-Go</a>
+            <a href="armenu#breakfast">Breakfast</a>
+            <a href="armenu#burgers">Burgers</a>
+            <a href="armenu#specials">Specials</a>
+            <a href="armenu#onthego">On-The-Go</a>
             <a href="javascript:void(0);" style={{fontSize:'15px'}} className="icon">&#9776;</a>
           </nav>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
       <div className="table-container">
                 
-          <h1>Breakfast</h1>  
+          <h1 id="breakfast">Breakfast</h1>  
             <h2>Breakfast Deals</h2>
           
           <table>
@@ -213,7 +211,7 @@ class ArMenu extends React.Component{
             </tbody>
           </table>
 
-            <h1>Burgers</h1>
+            <h1 id="burgers">Burgers</h1>
             <h2>Burger Choice: Includes Lettuce, Tomato, &amp; Cheese</h2>
             <table>
               <thead>
@@ -269,7 +267,7 @@ class ArMenu extends React.Component{
             </tbody>  
           </table>
 
-            <h1>Grill Specials</h1>
+            <h1 id="specials">Grill Specials</h1>
               <h2>Specials</h2>
             <table>
               <thead>
@@ -350,7 +348,7 @@ class ArMenu extends React.Component{
           </tbody>
         </table>
 
-          <h1>On-The-Go</h1>
+          <h1 id="onthego">On-The-Go</h1>
             <h2>Refridgerated Snacks</h2>
         <table>
           <thead>
@@ -538,7 +536,8 @@ class ArMenu extends React.Component{
           this.props.placeOrder("Anselma Room", arMenuItems[prop].price, arMenuItems[prop].qnty, arMenuItems[prop].id, deliverTime);
       }
     } 
-    alert("Order Has Been Placed"); 
+    alert("Order Has Been Placed");
+    this.props.history.push("/ordercomplete");
   };
 }
 
