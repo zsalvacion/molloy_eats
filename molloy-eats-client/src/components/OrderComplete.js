@@ -6,6 +6,7 @@ class OrderComplete extends React.Component {
   constructor(props) {
     super(props);
     this.handleBackToHomepage = this.handleBackToHomepage.bind(this);
+    this.calcDeliveryTimeAndTotalPrice = this.calcDeliveryTimeAndTotalPrice.bind(this);
     this.state = {
       deliveryTime: 'X:XX',
       totalPrice: 0.00
@@ -24,6 +25,7 @@ class OrderComplete extends React.Component {
         <h1>Thank You! Your Order has been Submitted.</h1>
           <h2>It will arrive at { this.state.deliveryTime }</h2>
           <h2>Your total comes to ${ this.state.totalPrice }</h2>
+          <button onClick={this.calcDeliveryTimeAndTotalPrice} type="button">Refresh</button>
           <table>
             <thead>
               <tr id="header">
@@ -43,6 +45,7 @@ class OrderComplete extends React.Component {
     );
   }
 
+  async calcDeliveryTimeAndTotalPrice() {
     var result = await this.props.data.getOrder;
     var resultDeliveryTime = result[result.length - 1].Time;
     var currentTotalPrice = 0;
